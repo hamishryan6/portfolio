@@ -1,0 +1,193 @@
+@media screen {
+
+    .ExperienceModal__Main {
+        position: fixed;
+        width: 100vw;
+        height: 100dvh;
+        background-color: rgba(0, 0, 0, 0.48);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 148px;
+        box-sizing: border-box;
+        z-index: 1;
+        overflow-y: scroll;
+    }
+
+    .ExperienceModal__Modal {
+        display: flex;
+        max-width: 1016px;
+        padding: 48px 48px 64px 48px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 48px;
+        border-radius: 24px;
+        border: 2px solid var(--main-accent-colour);
+        background-color: var(--main-bg-colour);;
+        box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.12);
+        box-sizing: border-box;
+
+        transition: border ease-out 300ms;
+        transition: background-color ease-out 300ms;
+
+    }
+
+    .ExperienceModal__Title {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        align-items: flex-start;
+        gap: 20px;
+        position: relative;
+    }
+
+    .ExperienceModal__Divider {
+        border-radius: 1px;
+        background-color: var(--main-accent-colour);
+        height: 4px;
+        align-self: stretch;
+
+        transition: background-color ease-out 300ms;
+    }
+
+    .ExperienceModal__Content {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .ExperienceModal__ContentContainer__Tech {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .ExperienceModal__ContentContainer__Text {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .ExperienceModal__SubTitle {
+        color: var(--main-text-colour);
+        font-size: var(--medium-font-size);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        z-index: 2;
+
+        transition: color ease-out 300ms;
+    }
+
+    .ExperienceModal__SkillsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 8px;
+        row-gap: 0px;
+    }
+
+    .ExperienceModal__Tech {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 12px;
+        z-index: 3;
+    }
+
+    .ExperienceModal__Body {
+        color: var(--main-text-colour);
+        font-size: var(--medium-font-size);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        transition: color ease-out 300ms;
+    }
+
+    .ExperienceModal__Tech>.TechCard {
+        display: flex;
+        padding: 8px;
+        align-items: center;
+        border-radius: 12px;
+        border-width: 2px;
+    }
+}
+
+@media (width < 1358px) {
+
+    .ExperienceModal__Main {
+        padding: 104px;
+    }
+
+    .ExperienceModal__Modal {
+        max-width: 880px;
+    }
+
+    .ExperienceModal__Title {
+        grid-template-columns: 64px 1fr;
+    }
+}
+
+@media (width < 704px) {
+
+    .ExperienceModal__Main {
+        padding: 64px;
+    }
+
+    .ExperienceModal__Modal {
+        padding: 24px 24px 36px 24px;
+        gap: 24px
+    }
+
+    .ExperienceModal__Title {
+        grid-template-columns: 48px 1fr;
+    }
+
+    .ExperienceModal__Content {
+        gap: 24px
+    }
+
+}
+
+@media (width < 516px) {
+
+    .ExperienceModal__Main {
+        padding: 8px;
+        background-color: rgba(0, 0, 0, 0.64);
+        align-items: end;
+    }
+
+    .ExperienceModal__Modal {
+        padding: 20px;
+        gap: 20px;
+        max-height: 80vh;
+        overflow-y: scroll;
+        border-radius: 16px;
+        border: none;
+    }
+
+    .ExperienceModal__Divider {
+        height: 2px;
+        width: 100%;
+    }
+
+    .ExperienceModal__Modal::-webkit-scrollbar {
+        display: none;
+    }
+
+    .ExperienceModal__Title>.ExperienceCard__Image {
+        width: 48px;
+        height: 48px;
+    }
+
+    .ExperienceModal__Title {
+        grid-template-columns: 48px 1fr;
+    }
+
+    .ExperienceModal__Content {
+        gap: 20px
+    }
+
+}

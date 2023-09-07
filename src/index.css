@@ -5,9 +5,95 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  min-height: -webkit-fill-available;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2, h3, h4 {
+  font-family: 'obviously', 'san-serif';
+}
+
+a, input, button, p {
+  appearance: none;
+  text-decoration: none;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  background: none;
+}
+
+:root.dark {
+  --main-bg-colour: #1D1E1F;
+  --main-text-colour: #FFF;
+  --secondary-text-colour: rgba(194, 210, 255, 0.6);
+  --main-gradient-fill: linear-gradient(164deg, rgba(135, 167, 255, 0.06) 5%, rgba(135, 167, 255, 0.012) 90%);
+  --hover-gradient-fill: linear-gradient(164deg, rgba(135, 167, 255, 0.12) 5%, rgba(135, 167, 255, 0.04) 90%);
+  --main-accent-colour: rgba(135, 167, 255, 0.04);
+  --main-accent-colour-solid: rgb(31, 33, 38);
+  --hover-accent-colour: rgba(135, 167, 255, 0.08);
+  --main-tag-colour: #FFF;
+  --green-accent: #00B87D;
+  --orange-accent: #F28100;
+}
+
+:root.light {
+  --main-bg-colour: #F2F6FA;
+  --main-text-colour: #1D1E1F;
+  --secondary-text-colour: rgba(0, 14, 51, 0.6);
+  --main-gradient-fill: linear-gradient(164deg, rgba(20, 71, 204, 0.06) 5%, rgba(20, 71, 204, 0.012) 90%);
+  --hover-gradient-fill: linear-gradient(164deg, rgba(20, 71, 204, 0.12) 5%, rgba(20, 71, 204, 0.04) 90%);
+  --main-accent-colour: rgba(20, 71, 204, 0.04);
+  --main-accent-colour-solid: rgb(235, 238, 249);
+  --hover-accent-colour: rgba(20, 71, 204, 0.08);
+  --main-tag-colour: rgba(20, 71, 204, 1);
+  --green-accent: #33D6A3;
+  --orange-accent: #FFA53D;
+}
+
+@media screen {
+
+  :root {
+    --header-font-size: 64px;
+    --xl-font-size: 32px;
+    --large-font-size: 24px;
+    --medium-font-size: 20px;
+    --small-font-size: 16px;
+  }
+
+}
+
+@media (width < 1358px) {
+
+  :root {
+    --header-font-size: 48px;
+    --xl-font-size: 24px;
+    --medium-font-size: 16px;
+  }
+
+}
+
+@media (width < 988px) {
+
+  :root {
+    --header-font-size: 44px;
+  }
+
+}
+
+@media (width < 704px) {
+
+  :root {
+    --header-font-size: 36px;
+    --large-font-size: 20px;
+    --small-font-size: 14px;
+  }
+
+}
+
+@media (width < 516px) {
+
+  :root {
+    --header-font-size: 7vw;
+    --xl-font-size: 20px;
+    --small-font-size: 12px;
+  }
+
 }

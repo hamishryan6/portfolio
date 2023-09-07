@@ -1,0 +1,49 @@
+@media screen {
+
+    .Tooltip__Main {
+        opacity: 0;
+        position: absolute;
+        top: -42px;
+        margin-inline: auto;
+        padding: 8px 12px;
+        border-radius: 8px;
+        white-space: nowrap;
+        border: 1px solid;
+        border-color: var(--hover-accent-colour);
+        background-color: var(--main-accent-colour-solid);
+        color: var(--main-text-colour);
+        font-size: var(--small-font-size);
+        line-height: 100%;
+
+        transition: opacity ease-in 160ms;
+    }
+
+    div:hover>.Tooltip__Main,
+    a:hover>.Tooltip__Main {
+        opacity: 1;
+
+        transition: opacity ease-in 160ms;
+    }
+
+    div:active>.Tooltip__Main,
+    a:active>.Tooltip__Main {
+        opacity: 0;
+
+        transition: opacity ease-in 80ms;
+    }
+
+    .PersistantTooltip {
+        opacity: 1;
+
+        transition: opacity ease-in 160ms;
+    }
+
+}
+
+@media (width < 704px) {
+
+    .Tooltip__Main {
+        display: none;
+    }
+    
+}

@@ -1,0 +1,409 @@
+@media screen {
+
+    .Home__Main {
+        background-color: var(--main-bg-colour);
+        width: 100vw;
+        scroll-behavior: smooth;
+
+        transition: background-color ease-out 300ms;
+    }
+
+    .Header__Main {
+        display: flex;
+        padding: 280px 148px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Header__Container {
+        width: 100%;
+        max-width: 1216px;
+    }
+
+    .Header {
+        color: var(--main-text-colour);
+        font-size: var(--header-font-size);
+        line-height: 160%;
+        font-style: normal;
+        font-weight: 500;
+        /* leading-trim: both; */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: end;
+        max-width: 1064px;
+
+        transition: color ease-out 300ms;
+    }
+
+    .Header__Span {
+        border-radius: 8px;
+        padding: 0px 10px 0px 8px;
+        height: 80px;
+        display: flex;
+        align-items: end;
+        margin-left: 8px;
+    }
+
+    .Designer__Span {
+        background-color: var(--green-accent);
+    
+        transition: background-color ease-out 300ms;
+    }
+
+    .Developer__Span {
+        background-color: var(--orange-accent);
+
+        transition: background-color ease-out 300ms;
+    }
+
+    .Divider__Container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 148px;
+    }
+
+    .Divider {
+        border-radius: 1px;
+        background-color: rgba(135, 167, 255, 0.04);
+        width: 100%;
+        max-width: 1216px;
+        height: 4px;
+    }
+
+    h2 {
+        color: var(--main-text-colour);
+        font-size: var(--xl-font-size);
+        line-height: 100%;
+        font-style: normal;
+        font-weight: 700;
+        /* leading-trim: both; */
+        margin: 0;
+
+        transition: color ease-out 300ms;
+    }
+
+    p {
+        color: var(--main-text-colour);
+        font-size: var(--medium-font-size);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        margin: 0;
+
+        transition: color ease-out 300ms;
+    }
+
+    .Content__Main {
+        padding: 148px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 188px;
+    }
+
+    .Content__Container {
+        display: grid;
+        max-width: 1216px;
+        grid-template-columns: 292px 1fr;
+        gap: 92px;
+        width: 100%;
+    }
+
+    .ExperienceCard__Container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .TechCard__Container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .ContentHeader__Container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .ContactForm {
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+    }
+
+    .ContactForm__Inputs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .ContactForm__Names {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        grid-column: 1 / 3;
+    }
+
+    input,
+    textarea {
+        display: flex;
+        padding: 16px;
+        border-radius: 12px;
+        background-color: rgba(135, 167, 255, 0.04);
+        color: var(--main-text-colour);
+        /* leading-trim: both; */
+        /* text-edge: cap; */
+        font-size: var(--medium-font-size);
+        font-weight: 400;
+        appearance: none;
+        border: none;
+        width: unset;
+
+        transition: color ease-out 300ms;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: var(--main-text-colour);
+        opacity: 0.4;
+    }
+
+    .ContactForm {
+        min-height: 160px;
+        resize: none;
+        position: relative;
+    }
+
+    button {
+        appearance: none;
+        border: none;
+        outline: none;
+    }
+
+    .ContactForm__Submit {
+        display: flex;
+        padding: 8px 16px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        background-color: var(--green-accent);
+        color: var(--main-bg-colour);
+        /* leading-trim: both; */
+        /* text-edge: cap; */
+        font-size: var(--medium-font-size);
+        line-height: 100%;
+        font-weight: 600;
+        position: absolute;
+        bottom: 12px;
+        right: 12px;
+    }
+
+    .ContactForm__Submit:hover {
+        background-color: #009667;
+    }
+
+    .ContactForm__Submit:active {
+        opacity: 0.6;
+    }
+
+}
+
+@media (width < 1358px) {
+
+    .Header__Main {
+        padding: 216px 104px;
+    }
+
+    .Header {
+        max-width: 880px;
+    }
+
+    .Header__Span {
+        height: 60px;
+    }
+
+    .Divider__Container {
+        padding: 0px 104px;
+    }
+
+    .Content__Main {
+        padding: 104px;
+        gap: 148px;
+    }
+
+    .Content__Container {
+        grid-template-columns: 216px 1fr;
+        gap: 104px;
+    }
+
+    .ExperienceCard__Container {
+        gap: 16px;
+    }
+
+    .TechCard__Container {
+        gap: 16px;
+    }
+
+    input,
+    textarea {
+        padding: 16px;
+    }
+
+    .ContactForm {
+        gap: 12px;
+    }
+
+    .ContactForm__Inputs {
+        gap: 12px;
+    }
+
+    .ContactForm__Names {
+        gap: 12px;
+    }
+
+    .ContactForm__Submit {
+        padding: 8px 16px;
+    }
+
+}
+
+@media (width < 1132px) {
+    .Header__Main {
+        padding: 216px 64px;
+    }
+
+    .Divider__Container {
+        padding: 0px 64px;
+    }
+
+    .Content__Main {
+        padding: 64px;
+        gap: 148px;
+    }
+
+    .Content__Container {
+        grid-template-columns: 216px 1fr;
+        gap: 64px;
+    }
+}
+
+@media (width < 988px) {
+
+    .Content__Container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .Header {
+        max-width: 760px;
+    }
+
+    .Header__Main {
+        padding: 148px 64px;
+    }
+
+    .Header__Span {
+        height: 56px;
+        margin-left: 8px;
+    }
+
+    .Developer__Span {
+        margin-top: 0.5em;
+    }
+
+}
+
+@media (width < 861px) {
+
+    .Header__Span {
+        margin-left: 0;
+        margin-right: 8px;
+    }
+
+}
+
+@media (width < 704px) {
+
+    .Header__Main {
+        padding: 148px 32px;
+    }
+
+    .Header {
+        max-width: 600px;
+    }
+
+    .Header__Span {
+        height: 48px;
+    }
+
+    .ContactForm {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .Divider__Container {
+        padding: 0px 32px;
+    }
+
+    .Content__Main {
+        padding: 32px;
+        gap: 64px;
+    }
+
+}
+
+@media (width < 516px) {
+    .Header__Main {
+        padding: 148px 16px;
+    }
+
+    .Header {
+        max-width: 472px;
+    }
+
+    .Header__Span {
+        height: 9vw;
+    }
+
+    .Divider__Container {
+        padding: 0px 16px;
+    }
+
+    .Content__Main {
+        padding: 32px 16px;
+        gap: 64px;
+    }
+
+    .Content__Container {
+        gap: 16px;
+    }
+
+    .TechCard__Container {
+        gap: 12px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .ContactForm__Inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .ContactForm__Names {
+        gap: 12px;
+        display: flex;
+        flex-direction: row;
+        grid-column: none;
+    }
+
+    .ContactForm__Names > input {
+        width: 100%;
+    }
+
+}
