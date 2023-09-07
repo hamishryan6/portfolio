@@ -25,8 +25,8 @@
         transition: opacity ease-in 160ms;
     }
 
-    div:active>.Tooltip__Main,
-    a:active>.Tooltip__Main {
+    div:active>.parentIsClickable,
+    a:active>.parentIsClickable {
         opacity: 0;
 
         transition: opacity ease-in 80ms;

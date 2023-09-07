@@ -39,12 +39,12 @@ export default function EmailLink() {
         <div className='EmailLink__Main'>
 
             <a className='EmailLink__MailTo__Container' href='mailto:hamishryan.au@gmail.com'>
-                <Tooltip label='Click to open mail client' />
+                <Tooltip label='Click to open mail client' parentIsClickable />
                 <div className='EmailLink__MailTo'>hamishryan.au@gmail.com</div>
             </a>
 
             <div className='EmailLink__Copy__Container'>
-                <Tooltip label={copyTooltip} isPersistant={isEmailCopied} />
+                <Tooltip label={copyTooltip} isPersistant={isEmailCopied} parentIsClickable />
 
                 <div className='EmailLink__Copy' onClick={() => copyEmail()}>
                     <Copy color='var(--main-text-colour)' height='20px' width='20px' />
