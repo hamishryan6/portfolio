@@ -3,14 +3,14 @@ import './Home.css'
 import ExperienceCard from '../../components/ExperienceCard/ExperienceCard'
 import ExperienceModal from '../../components/ExperienceModal/ExperienceModal'
 import { education, experience } from '../../content'
-import { Experience } from '../../types'
+import { Experience, tech } from '../../types'
 import ThemeToggle from '../../components/ThemeToggle/ThemeToggle'
 import EmailLink from '../../components/EmailLink/EmailLink'
 import TechCard from '../../components/TechCard/TechCard'
 
 export default function Home() {
 
-  const tech = ['Figma', 'Webflow', 'After Effects', 'Illustrator', 'InDesign', 'Photoshop', 'XD', 'Lottie', 'React', 'Typescript', 'HTML', 'CSS']
+  const tech: tech[] = ['Figma', 'Webflow', 'After Effects', 'Illustrator', 'InDesign', 'Photoshop', 'XD', 'Lottie', 'React', 'Typescript', 'HTML', 'CSS']
 
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
   const [selectedExperience, setSelectedExperience] = useState<Experience>()
@@ -168,20 +168,6 @@ export default function Home() {
 
           <h2>Contact</h2>
           <EmailLink />
-
-          {/* <form className='ContactForm' onSubmit={(e) => e.preventDefault()}>
-            <div className='ContactForm__Inputs'>
-              <div className='ContactForm__Names'>
-                <input placeholder='First Name' />
-                <input placeholder='Last Name' />
-              </div>
-              <input placeholder='Email' type='mail' />
-              <input placeholder='Phone Number' type='tel' />
-            </div>
-            <textarea className='ContactForm __Message' placeholder='Message' />
-            <button className='ContactForm__Submit' type='submit'>Send</button>
-          </form> */}
-
 
         </div>
 

@@ -4,14 +4,14 @@ import vald from '../../assets/images/vald.jpg'
 import qut from '../../assets/images/qut.jpg'
 import moonward from '../../assets/images/moonward.jpg'
 import allbrands from '../../assets/images/allbrands.jpg'
-import { Experience } from '../../types'
+import { Experience, company } from '../../types'
 
 type props = {
     experience: Experience
     onClick?: () => void
 }
 
-export const renderImage = (company: 'VALD' | 'QUT' | 'Moonward' | 'All Brands Toys') => {
+export const renderImage = (company: company) => {
     switch (company) {
         case 'All Brands Toys': return allbrands
         case 'Moonward': return moonward

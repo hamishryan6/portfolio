@@ -20,6 +20,8 @@ a, input, button, p {
   background: none;
 }
 
+/* Colour Variables */
+
 :root.dark {
   --main-bg-colour: #1D1E1F;
   --main-text-colour: #FFF;
@@ -47,6 +49,8 @@ a, input, button, p {
   --green-accent: #33D6A3;
   --orange-accent: #FFA53D;
 }
+
+/* Text Sizing */
 
 @media screen {
 
