@@ -1,0 +1,32 @@
+.Tabs__Main {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.Tab__Option {
+    padding: 6px 2px;
+    font-size: var(--medium-font-size);
+    color: var(--main-text-colour);
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+
+    transition: border-bottom 200ms ease-out;
+}
+
+.Tab__Option::before {
+    font-weight: 700;
+    display: block;
+    content: attr(value);
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.Tab__Option__Selected {
+    color: var(--main-action-colour);
+    font-weight: 700;
+    border-bottom: 2px solid var(--main-action-colour);
+
+    transition: border-bottom 200ms ease-out;
+}

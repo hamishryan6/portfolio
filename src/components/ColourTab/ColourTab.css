@@ -1,0 +1,47 @@
+.ColourTab__Main {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ColourTab__Container {
+    display: grid;
+    gap: 12px;
+}
+
+.ColourTab__Tab {
+    display: flex;
+    border-radius: 20px;
+    padding: 4px;
+
+    transition: 200ms ease-out;
+}
+
+.ColourTab__Tab:hover > .ColourTab__Tab__Swatch {
+    opacity: 0.4;
+
+    transition: 200ms ease-out;
+}
+
+.ColourTab__Tab__Selected {
+    color: var(--main-action-colour);
+    outline: 2px solid var(--main-action-colour);
+    background-color: var(--hover-accent-colour);
+    font-weight: 600;
+
+    transition: 200ms ease-out;
+}
+
+.ColourTab__Tab__Selected:hover > .ColourTab__Tab__Swatch {
+    opacity: 1;
+
+    transition: 200ms ease-out;
+}
+
+.ColourTab__Tab__Swatch {
+    height: 48px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    flex: 1;
+    opacity: 1;
+}

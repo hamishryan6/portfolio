@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=EB+Garamond:wght@500&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -14,13 +20,8 @@ body {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
   font-family: 'obviously', 'san-serif';
-}
-
-div {
-  box-sizing: border-box;
 }
 
 a,
@@ -29,12 +30,21 @@ button,
 nav,
 ul,
 li,
-p {
+p,
+h4 {
   appearance: none;
   text-decoration: none;
   font-family: 'Bricolage Grotesque', sans-serif;
   background: none;
   margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+textarea {
+  min-height: 200px;
 }
 
 /* Colour Variables */
@@ -69,6 +79,64 @@ p {
   --orange-accent: #FFA53D;
 }
 
+h1,
+h2,
+h3,
+h4,
+p {
+  color: var(--main-text-colour);
+  margin: 0;
+
+  transition: color ease-out 300ms;
+}
+
+h2 {
+  font-size: var(--xl-font-size);
+  line-height: 100%;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: var(--large-font-size);
+  line-height: 100%;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: var(--small-font-size);
+  font-weight: 600;
+}
+
+p {
+  font-size: var(--medium-font-size);
+  font-weight: 400;
+  line-height: 160%;
+}
+
+input,
+textarea {
+  display: flex;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: rgba(135, 167, 255, 0.04);
+  color: var(--main-text-colour);
+  font-size: var(--small-font-size);
+  font-weight: 400;
+  line-height: 140%;
+  appearance: none;
+  border: none;
+  width: unset;
+  resize: none;
+
+  transition: color ease-out 300ms;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--main-text-colour);
+  opacity: 0.4;
+}
+
 
 /* Text Sizing */
 
@@ -80,6 +148,7 @@ p {
     --large-font-size: 24px;
     --medium-font-size: 20px;
     --small-font-size: 16px;
+    --xs-font-size: 14px;
   }
 
 }
