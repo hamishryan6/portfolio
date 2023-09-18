@@ -27,8 +27,8 @@
     }
 
     .ThemeToggle__Option {
-        width: 42px;
-        height: 42px;
+        width: 44px;
+        height: 44px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -40,24 +40,24 @@
     }
 
     .ThemeToggle__Switch {
-        width: 42px;
-        height: 42px;
+        width: 44px;
+        height: 44px;
         background-color: var(--main-bg-colour);
         position: absolute;
         top: 8px;
         left: 29px;
-        border-radius: 42px;
+        border-radius: 44px;
         z-index: 4;
     }
 
     .ThemeToggle__Switch__Left {
-        transform: translateX(-21px);
+        transform: translateX(-22px);
 
         transition: ease-in 200ms;
     }
 
     .ThemeToggle__Switch__Right {
-        transform: translateX(21px);
+        transform: translateX(22px);
 
         transition: ease-in 200ms;
     }

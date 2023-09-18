@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=EB+Garamond:wght@500&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,17 +9,32 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Bricolage Grotesque', sans-serif;
   min-height: -webkit-fill-available;
+  box-sizing: border-box;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: 'obviously', 'san-serif';
 }
 
-a, input, button, p {
+div {
+  box-sizing: border-box;
+}
+
+a,
+input,
+button,
+nav,
+ul,
+li,
+p {
   appearance: none;
   text-decoration: none;
   font-family: 'Bricolage Grotesque', sans-serif;
   background: none;
+  margin: 0;
 }
 
 /* Colour Variables */
@@ -28,6 +45,7 @@ a, input, button, p {
   --secondary-text-colour: rgba(194, 210, 255, 0.6);
   --main-gradient-fill: linear-gradient(164deg, rgba(135, 167, 255, 0.06) 5%, rgba(135, 167, 255, 0.012) 90%);
   --hover-gradient-fill: linear-gradient(164deg, rgba(135, 167, 255, 0.12) 5%, rgba(135, 167, 255, 0.04) 90%);
+  --main-action-colour: rgba(135, 167, 255, 1);
   --main-accent-colour: rgba(135, 167, 255, 0.04);
   --main-accent-colour-solid: rgb(31, 33, 38);
   --hover-accent-colour: rgba(135, 167, 255, 0.08);
@@ -42,6 +60,7 @@ a, input, button, p {
   --secondary-text-colour: rgba(0, 14, 51, 0.6);
   --main-gradient-fill: linear-gradient(164deg, rgba(20, 71, 204, 0.06) 5%, rgba(20, 71, 204, 0.012) 90%);
   --hover-gradient-fill: linear-gradient(164deg, rgba(20, 71, 204, 0.12) 5%, rgba(20, 71, 204, 0.04) 90%);
+  --main-action-colour: rgba(20, 71, 204, 1);
   --main-accent-colour: rgba(20, 71, 204, 0.04);
   --main-accent-colour-solid: rgb(235, 238, 249);
   --hover-accent-colour: rgba(20, 71, 204, 0.08);
@@ -49,6 +68,7 @@ a, input, button, p {
   --green-accent: #33D6A3;
   --orange-accent: #FFA53D;
 }
+
 
 /* Text Sizing */
 

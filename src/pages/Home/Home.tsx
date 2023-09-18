@@ -4,19 +4,16 @@ import ExperienceCard from '../../components/ExperienceCard/ExperienceCard'
 import ExperienceModal from '../../components/ExperienceModal/ExperienceModal'
 import { education, experience } from '../../content'
 import { Experience, tech } from '../../types'
-import ThemeToggle from '../../components/ThemeToggle/ThemeToggle'
 import EmailLink from '../../components/EmailLink/EmailLink'
 import TechCard from '../../components/TechCard/TechCard'
+import { useModalContext } from '../../Context'
 
 export default function Home() {
 
   const tech: tech[] = ['Figma', 'Webflow', 'After Effects', 'Illustrator', 'InDesign', 'Photoshop', 'XD', 'Lottie', 'React', 'Typescript', 'HTML', 'CSS']
 
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
   const [selectedExperience, setSelectedExperience] = useState<Experience>()
-  const [theme, setTheme] = useState<'dark' | 'light'>('dark')
-
-  const themeColourTag = document.getElementById('theme-color') as HTMLMetaElement
+  const { isModalOpen, setIsModalOpen } = useModalContext()
 
   const renderTechCards = () => (
     tech.map((techItem, index) => (
@@ -60,57 +57,15 @@ export default function Home() {
     )
   }
 
-  const setDefaultTheme = () => {
-    const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
-    if (darkThemeMq.matches) {
-      setTheme('dark')
-    } else {
-      setTheme('light')
-    }
-  }
-
-  const toggleTheme = () => {
-    if (theme === 'dark') {
-      setTheme('light')
-      sessionStorage.setItem("theme", "light")
-      themeColourTag.content = "#F2F6FA"
-    }
-    else {
-      setTheme('dark')
-      sessionStorage.setItem("theme", "dark")
-      themeColourTag.content = "#1D1E1F"
-    }
-  }
-
   useEffect(() => {
     if (isModalOpen) document.body.style.overflow = 'hidden'
     else document.body.style.overflow = 'scroll'
   }, [isModalOpen])
 
-  useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.remove('light')
-      document.documentElement.classList.add('dark')
-      themeColourTag.content = "#1D1E1F"
-    } else {
-      document.documentElement.classList.remove('dark')
-      document.documentElement.classList.add('light')
-      themeColourTag.content = "#F2F6FA"
-    }
-  }, [theme])
-
-  useEffect(() => {
-    let storageTheme = sessionStorage.getItem('theme') as 'dark' | 'light' | null
-    if (storageTheme === null) return setDefaultTheme()
-    setTheme(storageTheme)
-  }, [])
-
   return (
     <div className='Home__Main'>
 
       {renderModal()}
-
-      <ThemeToggle theme={theme} toggleTheme={() => toggleTheme()} isVisible={!isModalOpen} />
 
       <div className='Header__Main'>
         <div className='Header__Container'>
@@ -132,7 +87,7 @@ export default function Home() {
 
         <div className='Content__Container'>
           <h2>About me</h2>
-          <p>I am a highly skilled designer and developer with the ability to work in both creative and technical environments. Since the beginning of my career as a designer, I have always been interested in creating products that not only look good but also feel good. This is achieved by prioritising efficiency and visuals. I constantly look to leading software products for inspiration, aiming to incorporate my favourite elements into my own designs. <br/> <br/> When it comes to development, I am always eager to learn new technologies whenever possible. My desire to delve into software engineering stemmed from a passion for crafting pixel-perfect products based on my own designs, allowing for no compromises in terms of style.</p>
+          <p>I am a highly skilled designer and developer with the ability to work in both creative and technical environments. Since the beginning of my career as a designer, I have always been interested in creating products that not only look good but also feel good. This is achieved by prioritising efficiency and visuals. I constantly look to leading software products for inspiration, aiming to incorporate my favourite elements into my own designs. <br /> <br /> When it comes to development, I am always eager to learn new technologies whenever possible. My desire to delve into software engineering stemmed from a passion for crafting pixel-perfect products based on my own designs, allowing for no compromises in terms of style.</p>
         </div>
 
         <div className='Content__Container'>

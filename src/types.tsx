@@ -16,3 +16,7 @@ export type Experience = {
     skills: string[]
 }
 
+export type modalStateContext = {
+    isModalOpen: boolean,
+    setIsModalOpen: (state: boolean) => void
+}
