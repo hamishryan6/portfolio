@@ -13,9 +13,10 @@ import css from '../../assets/images/css.png'
 import lottie from '../../assets/images/lottie.png'
 import typescript from '../../assets/images/typescript.png'
 import Tooltip from '../Tooltip/Tooltip'
+import { tech } from '../../types'
 
 type Props = {
-    title: string,
+    title: tech,
     hideTitle?: boolean
 }
 

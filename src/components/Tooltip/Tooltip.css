@@ -45,5 +45,9 @@
     .Tooltip__Main {
         display: none;
     }
+
+    .PersistantTooltip {
+        display: block;
+    }
     
 }
