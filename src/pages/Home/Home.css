@@ -10,14 +10,14 @@
 
     .Header__Main {
         display: flex;
-        padding: 280px 148px;
+        padding: var(--header-padding);
         align-items: center;
         justify-content: center;
     }
 
     .Header__Container {
         width: 100%;
-        max-width: 1216px;
+        max-width: var(--content-max-width);
     }
 
     .Header {
@@ -67,12 +67,12 @@
         border-radius: 1px;
         background-color: rgba(135, 167, 255, 0.04);
         width: 100%;
-        max-width: 1216px;
+        max-width: var(--content-max-width);
         height: 4px;
     }
 
     .Content__Main {
-        padding: 148px;
+        padding: var(--content-padding);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -82,7 +82,7 @@
 
     .Content__Container {
         display: grid;
-        max-width: 1216px;
+        max-width: var(--content-max-width);
         grid-template-columns: 292px 1fr;
         gap: 92px;
         width: 100%;
@@ -168,10 +168,6 @@
 
 @media (width < 1358px) {
 
-    .Header__Main {
-        padding: 216px 104px;
-    }
-
     .Header {
         max-width: 880px;
     }
@@ -185,7 +181,6 @@
     }
 
     .Content__Main {
-        padding: 104px;
         gap: 148px;
     }
 
@@ -226,16 +221,12 @@
 }
 
 @media (width < 1132px) {
-    .Header__Main {
-        padding: 216px 64px;
-    }
 
     .Divider__Container {
         padding: 0px 64px;
     }
 
     .Content__Main {
-        padding: 64px;
         gap: 148px;
     }
 
@@ -255,10 +246,6 @@
 
     .Header {
         max-width: 760px;
-    }
-
-    .Header__Main {
-        padding: 148px 64px;
     }
 
     .Header__Span {
@@ -283,10 +270,6 @@
 
 @media (width < 704px) {
 
-    .Header__Main {
-        padding: 148px 32px;
-    }
-
     .Header {
         max-width: 600px;
     }
@@ -305,16 +288,12 @@
     }
 
     .Content__Main {
-        padding: 32px;
         gap: 64px;
     }
 
 }
 
 @media (width < 516px) {
-    .Header__Main {
-        padding: 148px 16px;
-    }
 
     .Header {
         max-width: 472px;
@@ -329,7 +308,6 @@
     }
 
     .Content__Main {
-        padding: 32px 16px;
         gap: 64px;
     }
 

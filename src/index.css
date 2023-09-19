@@ -39,14 +39,6 @@ h4 {
   margin: 0;
 }
 
-button {
-  cursor: pointer;
-}
-
-textarea {
-  min-height: 200px;
-}
-
 /* Colour Variables */
 
 :root.dark {
@@ -113,12 +105,20 @@ p {
   line-height: 160%;
 }
 
+button {
+  cursor: pointer;
+}
+
+textarea {
+  min-height: 200px;
+}
+
 input,
 textarea {
   display: flex;
   padding: 16px;
   border-radius: 12px;
-  background-color: rgba(135, 167, 255, 0.04);
+  background-color: var(--main-accent-colour);
   color: var(--main-text-colour);
   font-size: var(--small-font-size);
   font-weight: 400;
@@ -135,10 +135,20 @@ input::placeholder,
 textarea::placeholder {
   color: var(--main-text-colour);
   opacity: 0.4;
+ 
+  transition: 200ms ease-out;
+}
+
+input:hover::placeholder,
+textarea:hover::placeholder {
+  color: var(--main-text-colour);
+  opacity: 0.6;
+
+  transition: 200ms ease-out;
 }
 
 
-/* Text Sizing */
+/* Dynamic Sizing */
 
 @media screen {
 
@@ -149,6 +159,10 @@ textarea::placeholder {
     --medium-font-size: 20px;
     --small-font-size: 16px;
     --xs-font-size: 14px;
+
+    --content-max-width: 1216px;
+    --content-padding: 148px;
+    --header-padding: 320px 148px 280px 148px;
   }
 
 }
@@ -159,6 +173,18 @@ textarea::placeholder {
     --header-font-size: 48px;
     --xl-font-size: 24px;
     --medium-font-size: 16px;
+
+    --content-padding: 104px;
+    --header-padding: 240px 104px 216px 104px;
+  }
+
+}
+
+@media (width < 1132px) {
+
+  :root {
+    --content-padding: 64px;
+    --header-padding: 240px 64px 216px 64px;
   }
 
 }
@@ -167,6 +193,12 @@ textarea::placeholder {
 
   :root {
     --header-font-size: 44px;
+
+    --header-padding: 164px 64px 148px 64px;
+  }
+
+  textarea {
+    min-height: 120px;
   }
 
 }
@@ -177,6 +209,10 @@ textarea::placeholder {
     --header-font-size: 36px;
     --large-font-size: 20px;
     --small-font-size: 14px;
+    --xs-font-size: 12px;
+
+    --content-padding: 32px;
+    --header-padding: 148px 32px;
   }
 
 }
@@ -187,6 +223,9 @@ textarea::placeholder {
     --header-font-size: 7vw;
     --xl-font-size: 20px;
     --small-font-size: 12px;
+
+    --content-padding: 32px 16px;
+    --header-padding: 148px 16px;
   }
 
 }

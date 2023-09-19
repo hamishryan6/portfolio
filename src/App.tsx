@@ -10,9 +10,11 @@ import Context from './Context';
 function App() {
 
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
+  const [theme, setTheme] = useState<'dark' | 'light'>('dark')
+
 
   return (
-    <Context.Provider value={{ isModalOpen, setIsModalOpen }}>
+    <Context.Provider value={{ isModalOpen, setIsModalOpen, theme, setTheme }}>
       <Navigation />
       <ThemeToggle isVisible={!isModalOpen} />
 

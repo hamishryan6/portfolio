@@ -17,6 +17,8 @@ export type Experience = {
 }
 
 export type modalStateContext = {
-    isModalOpen: boolean,
+    isModalOpen: boolean
     setIsModalOpen: (state: boolean) => void
+    theme: 'dark' | 'light'
+    setTheme: (state: 'dark' | 'light') => void
 }

@@ -27,8 +27,8 @@
     }
 
     .ThemeToggle__Option {
-        width: 44px;
-        height: 44px;
+        width: 48px;
+        height: 48px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -40,24 +40,24 @@
     }
 
     .ThemeToggle__Switch {
-        width: 44px;
-        height: 44px;
+        width: 48px;
+        height: 48px;
         background-color: var(--main-bg-colour);
         position: absolute;
         top: 8px;
-        left: 29px;
-        border-radius: 44px;
+        left: 32px;
+        border-radius: 48px;
         z-index: 4;
     }
 
     .ThemeToggle__Switch__Left {
-        transform: translateX(-22px);
+        transform: translateX(-24px);
 
         transition: ease-in 200ms;
     }
 
     .ThemeToggle__Switch__Right {
-        transform: translateX(22px);
+        transform: translateX(24px);
 
         transition: ease-in 200ms;
     }
@@ -68,6 +68,25 @@
     .ThemeToggle__Main {
         right: 32px;
         top: 32px;
+    }
+
+    .ThemeToggle__Option {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .ThemeToggle__Switch {
+        width: 40px;
+        height: 40px;
+        left: 28px;
+    }
+    
+    .ThemeToggle__Switch__Left {
+        transform: translateX(-20px);
+    }
+    
+    .ThemeToggle__Switch__Right {
+        transform: translateX(20px);
     }
 
 }
