@@ -2,6 +2,7 @@ import React from 'react'
 import './TechCard.css'
 import aftereffects from '../../assets/images/aftereffects.png'
 import figma from '../../assets/images/figma.png'
+import firebase from '../../assets/images/firebase.png'
 import illustrator from '../../assets/images/illustrator.png'
 import indesign from '../../assets/images/indesign.png'
 import photoshop from '../../assets/images/photoshop.png'
@@ -27,6 +28,7 @@ export default function TechCard({ title, hideTitle }: Props) {
             case 'After Effects': return aftereffects
             case 'CSS': return css
             case 'Figma': return figma
+            case 'Firebase': return firebase
             case 'HTML': return html
             case 'InDesign': return indesign
             case 'Illustrator': return illustrator

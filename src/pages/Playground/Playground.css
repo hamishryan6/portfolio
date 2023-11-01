@@ -1,13 +1,5 @@
 @media screen {
 
-    .Playground__Main {
-        background-color: var(--main-bg-colour);
-        width: 100vw;
-        scroll-behavior: smooth;
-
-        transition: background-color ease-out 300ms;
-    }
-
     .Playground__Header {
         display: flex;
         justify-content: center;
@@ -58,10 +50,12 @@
         grid-column-start: 2;
     }
 
-    .Playground__Content {
+    .Section__Content {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+        gap: 148px;
         padding: var(--content-padding);
     }
 

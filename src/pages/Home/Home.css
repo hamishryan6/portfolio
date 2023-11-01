@@ -1,6 +1,6 @@
 @media screen {
 
-    .Home__Main {
+    .Page__Main {
         background-color: var(--main-bg-colour);
         width: 100vw;
         scroll-behavior: smooth;

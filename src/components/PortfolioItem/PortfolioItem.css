@@ -1,0 +1,143 @@
+@media screen {
+    .PortfolioItem__Main {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        max-width: var(--content-max-width);
+    }
+
+    .PortfolioItem__TitleContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .PortfolioItem__TitleContainer>h4 {
+        font-size: var(--medium-font-size);
+        font-family: 'Obviously';
+        font-weight: 400;
+        opacity: 0.6;
+    }
+
+    .PortfolioItem__MetaContainer {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 48px;
+        height: 480px;
+    }
+
+    .PortfolioItem__MetaContainer>img {
+        border-radius: 16px;
+        object-position: center top;
+        object-fit: cover;
+        height: 480px;
+        width: 100%;
+        max-height: 480px;
+    }
+
+    .PortfolioItem__Info {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .PortfolioItem__InfoContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .PortfolioItem__InfoContainer>h4 {
+        color: var(--main-text-colour);
+        font-size: var(--small-font-size);
+        font-weight: 700;
+    }
+
+    .PortfolioItem__TagContainer {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .PortfolioItem__SoftwareContainer {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .PortfolioItem__SoftwareContainer>.TechCard {
+        display: flex;
+        padding: 8px;
+        align-items: center;
+        border-radius: 12px;
+        border-width: 2px;
+    }
+
+    .DesignTag,
+    .FrontendTag,
+    .BackendTag {
+        display: flex;
+        padding: 8px 16px;
+        align-items: flex-start;
+        border-radius: 6px;
+        color: var(--main-bg-colour);
+        font-size: var(--small-font-size);
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    .DesignTag {
+        background-color: var(--green-accent);
+    }
+
+    .FrontendTag {
+        background-color: var(--orange-accent);
+    }
+
+    .BackendTag {
+        background-color: var(--purple-accent);
+    }
+}
+
+@media (width < 1132px) {
+
+    .PortfolioItem__MetaContainer {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .PortfolioItem__Info {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+    }
+
+}
+
+@media (width < 861px) {
+
+    .PortfolioItem__TitleContainer {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .PortfolioItem__Info {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media (width < 516px) {
+
+    .PortfolioItem__Info {
+        grid-template-columns: 1fr;
+    }
+
+    .PortfolioItem__MetaContainer>img {
+        height: 320px;
+    }
+
+}

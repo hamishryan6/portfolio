@@ -63,7 +63,7 @@ export default function Home() {
   }, [isModalOpen])
 
   return (
-    <div className='Home__Main'>
+    <div className='Page__Main'>
 
       {renderModal()}
 

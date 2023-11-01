@@ -6,6 +6,7 @@ import Playground from './pages/Playground/Playground';
 import Navigation from './components/Navigation/Navigation';
 import ThemeToggle from './components/ThemeToggle/ThemeToggle';
 import Context from './Context';
+import Portfolio from './pages/Portfolio/Portfolio';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/playground' element={<Playground />} />
+        <Route path='/portfolio' element={<Portfolio />} />
       </Routes>
     </Context.Provider>
   );

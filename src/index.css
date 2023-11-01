@@ -54,6 +54,7 @@ h4 {
   --main-tag-colour: #FFF;
   --green-accent: #00B87D;
   --orange-accent: #F28100;
+  --purple-accent: #BC67FF;
 }
 
 :root.light {
@@ -69,6 +70,7 @@ h4 {
   --main-tag-colour: rgba(20, 71, 204, 1);
   --green-accent: #33D6A3;
   --orange-accent: #FFA53D;
+  --purple-accent: #BC67FF;
 }
 
 h1,

@@ -10,7 +10,7 @@ export default function Playground() {
   const { theme } = useModalContext()
 
   return (
-    <div className='Playground__Main'>
+    <div className='Page__Main'>
 
       <div className='Playground__Header'>
         <div className='Playground__Header__Container'>
@@ -32,7 +32,7 @@ export default function Playground() {
         <div className='Divider' />
       </div>
 
-      <div className='Playground__Content'>
+      <div className='Section__Content'>
         <Builder title='Blog Card' />
 
       </div>
