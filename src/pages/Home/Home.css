@@ -1,11 +1,8 @@
 @media screen {
 
-    .Home__Main {
-        background-color: var(--main-bg-colour);
+    .Page__Main {
         width: 100vw;
         scroll-behavior: smooth;
-
-        transition: background-color ease-out 300ms;
     }
 
     .Header__Main {

@@ -1,0 +1,20 @@
+.PortfolioLink__Main {
+    background-color: var(--main-accent-colour);
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    color: var(--main-action-colour);
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    gap: 12px;
+}
+
+.LinkIcon {
+    fill: var(--main-action-colour);
+}
+
+.PortfolioLink__Main:hover {
+    background-color: var(--hover-accent-colour);
+}

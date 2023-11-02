@@ -1,7 +1,9 @@
 import React from 'react'
 import './TechCard.css'
 import aftereffects from '../../assets/images/aftereffects.png'
+import aws from '../../assets/images/aws.png'
 import figma from '../../assets/images/figma.png'
+import firebase from '../../assets/images/firebase.png'
 import illustrator from '../../assets/images/illustrator.png'
 import indesign from '../../assets/images/indesign.png'
 import photoshop from '../../assets/images/photoshop.png'
@@ -22,11 +24,13 @@ type Props = {
 
 export default function TechCard({ title, hideTitle }: Props) {
 
-    const renderImage = (title: string) => {
+    const renderImage = (title: tech) => {
         switch (title) {
             case 'After Effects': return aftereffects
+            case 'AWS': return aws
             case 'CSS': return css
             case 'Figma': return figma
+            case 'Firebase': return firebase
             case 'HTML': return html
             case 'InDesign': return indesign
             case 'Illustrator': return illustrator
