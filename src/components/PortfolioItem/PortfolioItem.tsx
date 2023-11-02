@@ -11,9 +11,9 @@ type Props = {
     description: string
     tags: ('Design' | 'Frontend' | 'Backend')[]
     tech: tech[]
-    links: {
+    links?: {
         label: 'GitHub' | 'Website' | 'App Store'
-        link : string
+        link: string
     }[]
     image: string
 }
@@ -36,7 +36,20 @@ export default function PortfolioItem({ title, company, year, description, tags,
         ))
     }
 
+    const renderLinkSection = () => {
+        if (!links) return
+        return (
+            <div className='PortfolioItem__InfoContainer'>
+                <h4>Links</h4>
+                <div className='PortfolioItem__Links'>
+                    {renderLinks()}
+                </div>
+            </div>
+        )
+    }
+
     const renderLinks = () => {
+        if (!links) return
         return links.map((link, index) => (
             <PortfolioLink label={link.label} link={link.link} key={index} />
         ))
@@ -52,7 +65,7 @@ export default function PortfolioItem({ title, company, year, description, tags,
             <p className='PortfolioItem__Description'>{description}</p>
 
             <div className='PortfolioItem__MetaContainer'>
-                <img src={image}  />
+                <img src={image} />
                 <div className='PortfolioItem__Info'>
                     <div className='PortfolioItem__InfoContainer'>
                         <h4>Responsibility</h4>
@@ -61,19 +74,14 @@ export default function PortfolioItem({ title, company, year, description, tags,
                         </div>
                     </div>
 
-                    <div className='PortfolioItem__InfoContainer'>
+                    <div className='PortfolioItem__InfoContainer PortfolioItem__TechStack'>
                         <h4>Tech Stack</h4>
                         <div className='PortfolioItem__TechContainer'>
                             {renderTech()}
                         </div>
                     </div>
 
-                    <div className='PortfolioItem__InfoContainer'>
-                        <h4>Links</h4>
-                        <div className='PortfolioItem__Links'>
-                            {renderLinks()}
-                        </div>
-                    </div>
+                    {renderLinkSection()}
 
                 </div>
             </div>

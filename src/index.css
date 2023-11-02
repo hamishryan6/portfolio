@@ -139,7 +139,7 @@ input::placeholder,
 textarea::placeholder {
   color: var(--main-text-colour);
   opacity: 0.4;
- 
+
   transition: 200ms ease-out;
 }
 
@@ -166,7 +166,7 @@ textarea:hover::placeholder {
 
     --content-max-width: 1216px;
     --content-padding: 148px;
-    --header-padding: 320px 148px 280px 148px;
+    --header-padding: 280px 148px 240px 148px;
   }
 
 }
@@ -176,6 +176,7 @@ textarea:hover::placeholder {
   :root {
     --header-font-size: 48px;
     --xl-font-size: 24px;
+    --large-font-size: 20px;
     --medium-font-size: 16px;
 
     --content-padding: 104px;
@@ -197,8 +198,7 @@ textarea:hover::placeholder {
 
   :root {
     --header-font-size: 44px;
-
-    --header-padding: 164px 64px 148px 64px;
+    --header-padding: 196px 64px 148px 64px;
   }
 
   textarea {
@@ -211,12 +211,11 @@ textarea:hover::placeholder {
 
   :root {
     --header-font-size: 36px;
-    --large-font-size: 20px;
     --small-font-size: 14px;
     --xs-font-size: 12px;
 
     --content-padding: 32px;
-    --header-padding: 148px 32px;
+    --header-padding: 196px 32px 148px 32px;
   }
 
 }
@@ -229,7 +228,7 @@ textarea:hover::placeholder {
     --small-font-size: 12px;
 
     --content-padding: 32px 16px;
-    --header-padding: 148px 16px;
+    --header-padding: 196px 16px 148px 16px;
   }
 
 }

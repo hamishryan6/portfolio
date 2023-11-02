@@ -9,7 +9,7 @@
         background-color: var(--main-accent-colour);
         border-radius: 48px;
         display: flex;
-        gap: 8px;
+        gap: 4px;
         z-index: 2;
     }
 

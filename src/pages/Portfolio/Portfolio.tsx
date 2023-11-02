@@ -8,6 +8,7 @@ import InvoiceGenerator from '../../assets/images/invoice-generator.png'
 import PGWWebsite from '../../assets/images/pgw-website.jpg'
 import memble from '../../assets/images/memble.jpg'
 import ae from '../../assets/images/ae.jpg'
+import hometownnp from '../../assets/images/hometownnp.jpg'
 
 export default function Portfolio() {
 
@@ -18,8 +19,6 @@ export default function Portfolio() {
 
             <div className='Playground__Header'>
                 <div className='Playground__Header__Container'>
-
-                    <img src={theme === 'dark' ? headerImageDark : headerImageLight} className='Playground__Header__Image' />
 
                     <div className='Playground__Header__Text'>
                         <h2>Portfolio of work</h2>
@@ -39,7 +38,7 @@ export default function Portfolio() {
                     company='Hutch Table Accessories'
                     year='2023'
                     description={`As Hutch Table Accessories launched their wholesale site, they needed an internal tool to help with shipping invoices and tax receipts. I designed and developed a simple web app to allow them to enter the appropriate information from an order and then download a formatted PDF using the react-pdf library. Although I don't have an exact copy of the real project I created for Hutch, I have uploaded a replica with generic branding to GitHub`}
-                    tags={['Design', 'Frontend', 'Backend']}
+                    tags={['Design', 'Frontend']}
                     tech={['AWS', 'Figma', 'React', 'Typescript']}
                     links={[{
                         label: 'GitHub',
@@ -63,6 +62,16 @@ export default function Portfolio() {
                 />
 
                 <PortfolioItem
+                    title='Mobile App & Web App'
+                    company='Hometown NP'
+                    year='2022'
+                    description={`Hometown NP is a mobile application that allows users to book telehealth doctors appointments, which would then be managed by the doctors web app. A main focus of mine was to create something minimal and easy to understand, a very important factor when working with healthcare applications. As the demographic for this app is so wide, the UI needed to feel familiar to users, creating an experience that didn't require much cognitive thought when booking a doctor's appointment. Although this app did not hit the development stage, I am really happy with how the designs were finished and I hope to draw inspiration from it in the future.`}
+                    tags={['Design']}
+                    tech={['Webflow', 'XD']}
+                    image={hometownnp}
+                />
+
+                <PortfolioItem
                     title='Mobile App'
                     company='Memble'
                     year='2022'
@@ -82,7 +91,7 @@ export default function Portfolio() {
                     year='2022'
                     description={`A&E is a local yard maintenance company in Brisbane. I put together a simple website for them to establish their online presence. Although we are still adding the finishing touches to this site, once launched it will be a simple way for users to get in touch with the A&E team. I designed this site in Figma and developed it in React. At this stage, the site is sitting in an AWS S3 bucket as a static site until we get photography taken and some copy written.`}
                     tags={['Design', 'Frontend']}
-                    tech={['AWS','Figma', 'Illustrator', 'React']}
+                    tech={['AWS', 'Figma', 'Illustrator', 'React']}
                     links={[{
                         label: 'Website',
                         link: 'http://ae-gardening.s3-website-ap-southeast-2.amazonaws.com'

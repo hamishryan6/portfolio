@@ -82,4 +82,8 @@
         max-width: 400px;
     }
 
+    .Section__Content {
+        gap: 84px;
+    }
+
 }
