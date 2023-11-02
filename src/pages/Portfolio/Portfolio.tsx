@@ -52,7 +52,7 @@ export default function Portfolio() {
                     title='Marketing Website'
                     company='PGW Financial'
                     year='2022'
-                    description={`During my time at Moonward, a did a full design and development of a Marketing website for a client called PGW Financial. This was designed in Adobe XD and Developed using Webflow. An interesting part of this project was using Firebase Auth and Firestore to create a functional login for users with a PGW account. It was great to learn some backend technologies and implement it on a client friendly platform like Webflow.`}
+                    description={`During my time at Moonward, I did full design and development of a Marketing website for a client called PGW Financial. This was designed in Adobe XD and Developed using Webflow. An interesting part of this project was using Firebase Auth and Firestore to create a functional login for users with a PGW account. It was great to learn some backend technologies and implement it on a client friendly platform like Webflow.`}
                     tags={['Design', 'Frontend', 'Backend']}
                     tech={['CSS', 'HTML', 'Firebase', 'Webflow', 'XD']}
                     links={[{
@@ -80,7 +80,7 @@ export default function Portfolio() {
                     title='Marketing Website'
                     company='A&E Gardening and Maintenance'
                     year='2022'
-                    description={`A&E is a local yard maintenance company in Brisbane. I put together a simple website for them to establish their online presence. Although we are still adding the finishing touches to this site, once launched it will be a simple way for users to get in touch with the A&E team. I designed this site in Figma and developed it in React. At this stage, the site is sitting in an AWS S3 bucket as a static site until we get photography and some copy written.`}
+                    description={`A&E is a local yard maintenance company in Brisbane. I put together a simple website for them to establish their online presence. Although we are still adding the finishing touches to this site, once launched it will be a simple way for users to get in touch with the A&E team. I designed this site in Figma and developed it in React. At this stage, the site is sitting in an AWS S3 bucket as a static site until we get photography taken and some copy written.`}
                     tags={['Design', 'Frontend']}
                     tech={['AWS','Figma', 'Illustrator', 'React']}
                     links={[{
