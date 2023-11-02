@@ -38,7 +38,7 @@ export default function Portfolio() {
                     title='Invoice and Receipt Generator'
                     company='Hutch Table Accessories'
                     year='2023'
-                    description={`As Hutch Table Accessories launched their wholesale site, they needed in internal tool to help with shipping invoices and tax receipts. I designed and developed a simple web app to allow them to enter the appropriate information from an order and then download a formatted PDF using the react-pdf library. Although I don't have an exact copy of the real project I created for Hutch, I have uploaded a replica with generic branding to GitHub`}
+                    description={`As Hutch Table Accessories launched their wholesale site, they needed an internal tool to help with shipping invoices and tax receipts. I designed and developed a simple web app to allow them to enter the appropriate information from an order and then download a formatted PDF using the react-pdf library. Although I don't have an exact copy of the real project I created for Hutch, I have uploaded a replica with generic branding to GitHub`}
                     tags={['Design', 'Frontend', 'Backend']}
                     tech={['AWS', 'Figma', 'React', 'Typescript']}
                     links={[{
