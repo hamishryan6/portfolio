@@ -1,6 +1,6 @@
 import { ReactElement } from "react"
 
-export type tech = 'After Effects' | 'CSS' | 'Figma' | 'Firebase' | 'HTML' | 'InDesign' | 'Illustrator' | 'Lottie' | 'Photoshop' | 'React' | 'Typescript' | 'Webflow' | 'XD'
+export type tech = 'After Effects' | 'AWS' | 'CSS' | 'Figma' | 'Firebase' | 'HTML' | 'InDesign' | 'Illustrator' | 'Lottie' | 'Photoshop' | 'React' | 'Typescript' | 'Webflow' | 'XD'
 export type company = 'VALD' | 'QUT' | 'Moonward' | 'All Brands Toys'
 
 export type Experience = {

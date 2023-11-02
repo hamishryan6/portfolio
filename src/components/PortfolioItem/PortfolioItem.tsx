@@ -7,9 +7,10 @@ import { tech } from '../../types'
 type Props = {
     title: string
     company: string
+    year: string
     description: string
     tags: ('Design' | 'Frontend' | 'Backend')[]
-    software: tech[]
+    tech: tech[]
     links: {
         label: 'GitHub' | 'Website' | 'App Store'
         link : string
@@ -17,7 +18,7 @@ type Props = {
     image: string
 }
 
-export default function PortfolioItem({ title, company, description, tags, software, links, image }: Props) {
+export default function PortfolioItem({ title, company, year, description, tags, tech, links, image }: Props) {
 
     const renderTags = () => {
         return tags.map((tag, index) => {
@@ -30,7 +31,7 @@ export default function PortfolioItem({ title, company, description, tags, softw
     }
 
     const renderTech = () => {
-        return software.map((tech, index) => (
+        return tech.map((tech, index) => (
             <TechCard title={tech} key={index} hideTitle />
         ))
     }
@@ -45,7 +46,7 @@ export default function PortfolioItem({ title, company, description, tags, softw
         <div className='PortfolioItem__Main'>
             <div className='PortfolioItem__TitleContainer'>
                 <h3>{title}</h3>
-                <h4>{company}</h4>
+                <h4>{year} • {company}</h4>
             </div>
 
             <p className='PortfolioItem__Description'>{description}</p>
@@ -61,8 +62,8 @@ export default function PortfolioItem({ title, company, description, tags, softw
                     </div>
 
                     <div className='PortfolioItem__InfoContainer'>
-                        <h4>Software</h4>
-                        <div className='PortfolioItem__SoftwareContainer'>
+                        <h4>Tech Stack</h4>
+                        <div className='PortfolioItem__TechContainer'>
                             {renderTech()}
                         </div>
                     </div>

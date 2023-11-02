@@ -16,6 +16,8 @@ body {
   font-family: 'Bricolage Grotesque', sans-serif;
   min-height: -webkit-fill-available;
   box-sizing: border-box;
+  background-color: var(--main-bg-colour);
+  transition: background-color ease-out 300ms;
 }
 
 h1,
@@ -54,7 +56,7 @@ h4 {
   --main-tag-colour: #FFF;
   --green-accent: #00B87D;
   --orange-accent: #F28100;
-  --purple-accent: #BC67FF;
+  --purple-accent: #ac50f3;
 }
 
 :root.light {

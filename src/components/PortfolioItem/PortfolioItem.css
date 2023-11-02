@@ -21,7 +21,7 @@
 
     .PortfolioItem__MetaContainer {
         display: grid;
-        grid-template-columns: 1fr 300px;
+        grid-template-columns: 1fr 304px;
         gap: 48px;
         height: 480px;
     }
@@ -59,13 +59,13 @@
         flex-wrap: wrap;
     }
 
-    .PortfolioItem__SoftwareContainer {
+    .PortfolioItem__TechContainer {
         display: flex;
         gap: 8px;
         flex-wrap: wrap;
     }
 
-    .PortfolioItem__SoftwareContainer>.TechCard {
+    .PortfolioItem__TechContainer>.TechCard {
         display: flex;
         padding: 8px;
         align-items: center;
@@ -80,9 +80,9 @@
         padding: 8px 16px;
         align-items: flex-start;
         border-radius: 6px;
-        color: var(--main-bg-colour);
+        color: var(--main-text-colour);
         font-size: var(--small-font-size);
-        font-weight: 500;
+        font-weight: 600;
         line-height: 100%;
     }
 
