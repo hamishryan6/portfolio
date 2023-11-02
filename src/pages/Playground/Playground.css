@@ -11,7 +11,6 @@
         justify-content: center;
         align-items: center;
         display: grid;
-        grid-template-columns: 3fr 2fr;
         gap: 84px;
         max-width: var(--content-max-width);
     }
@@ -80,6 +79,10 @@
 
     .Playground__Header__Image {
         max-width: 400px;
+    }
+
+    .Section__Content {
+        gap: 84px;
     }
 
 }
