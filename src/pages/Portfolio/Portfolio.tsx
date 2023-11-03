@@ -1,7 +1,4 @@
-import React from 'react'
 import './Portfolio.css'
-import headerImageDark from '../../assets/images/componentHeroDark.png'
-import headerImageLight from '../../assets/images/componentHeroLight.png'
 import { useModalContext } from '../../Context'
 import PortfolioItem from '../../components/PortfolioItem/PortfolioItem'
 import InvoiceGenerator from '../../assets/images/invoice-generator.png'
@@ -77,7 +74,7 @@ export default function Portfolio() {
                     year='2022'
                     description={`Memble is a membership based application that connects businesses to their customer base. Through ideation and wireframing, I created the branding and UI/UX for the Memble app. This was a solo project during the design phase where I worked closely with the Founder of Memble to create a seamless user-experience while also creating customer engagement to their local businesses. Once designs were approved I joined the Frontend Development team and worked on parts of the app using React Native. I am really happy with how development was implemented to ensure pixel perfect outcomes.`}
                     tags={['Design', 'Frontend']}
-                    tech={['Illustrator', 'Lottie', 'Photoshop', 'React', 'XD']}
+                    tech={['Illustrator', 'Lottie', 'Photoshop', 'React Native', 'XD']}
                     links={[{
                         label: 'App Store',
                         link: 'https://apps.apple.com/au/app/memble/id1630272903'

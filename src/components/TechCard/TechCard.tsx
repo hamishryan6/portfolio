@@ -7,6 +7,7 @@ import firebase from '../../assets/images/firebase.png'
 import illustrator from '../../assets/images/illustrator.png'
 import indesign from '../../assets/images/indesign.png'
 import photoshop from '../../assets/images/photoshop.png'
+import shopify from '../../assets/images/shopify.jpg'
 import react from '../../assets/images/react.png'
 import webflow from '../../assets/images/webflow.png'
 import xd from '../../assets/images/xd.png'
@@ -37,6 +38,8 @@ export default function TechCard({ title, hideTitle }: Props) {
             case 'Lottie': return lottie
             case 'Photoshop': return photoshop
             case 'React': return react
+            case 'React Native': return react
+            case 'Shopify': return shopify
             case 'Typescript': return typescript
             case 'Webflow': return webflow
             case 'XD': return xd
