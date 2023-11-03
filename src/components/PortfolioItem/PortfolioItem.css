@@ -147,7 +147,13 @@
     }
 
     .PortfolioItem__MetaContainer>img {
-        height: 320px;
+        height: calc(64vw - 32px);
+        max-height: none;
+    }
+
+    .PortfolioItem__TechStack {
+        grid-column: unset;
+        grid-row: unset;
     }
 
 }
