@@ -12,7 +12,7 @@ export let experience: Experience[] = [
         type: 'Full-time'
     },
     {
-        tech: ["Webflow", "After Effects", "Illustrator", "InDesign", "Photoshop", "XD", "Lottie", "React", "Typescript", "HTML", "CSS"],
+        tech: ["After Effects", "Illustrator", "InDesign", "Photoshop", "XD", "Lottie", "React", 'React Native', "Typescript", "HTML", "CSS", "Webflow", 'Firebase', 'AWS'],
         description: "As a UI/UX Designer and Frontend Developer, my role spanned across multiple projects. I was able to independently manage my deliverable timelines and worked as the sole designer for a product. As I gained proficiency in React and React Native, I could bridge the gap between design and development, often transitioning from design to product development on the same project. In addition to product design, I also undertook some branding projects, as well as constructing marketing websites and landing pages on Webflow.",
         skills: ["Web Design", "Mobile Design", "Responsive Design", "Wireframing", "Prototyping", "Motion Design", "Databases", "Frontend Development", "GitHub", "APIs", "Client Communication"],
         duration: "Nov 2020 - Jul 2022  (1 yrs, 9 mos)",

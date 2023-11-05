@@ -43,8 +43,9 @@ h4 {
 
 /* Colour Variables */
 
-:root.dark {
+:root.Dark {
   --main-bg-colour: #1D1E1F;
+  --transparent-bg-colour: #1D1E1F48;
   --main-text-colour: #FFF;
   --secondary-text-colour: rgba(194, 210, 255, 0.6);
   --main-gradient-fill: linear-gradient(164deg, rgba(135, 167, 255, 0.06) 5%, rgba(135, 167, 255, 0.012) 90%);
@@ -59,8 +60,9 @@ h4 {
   --purple-accent: #ac50f3;
 }
 
-:root.light {
+:root.Light {
   --main-bg-colour: #F2F6FA;
+  --transparent-bg-colour: #f2f6fac6;
   --main-text-colour: #1D1E1F;
   --secondary-text-colour: rgba(0, 14, 51, 0.6);
   --main-gradient-fill: linear-gradient(164deg, rgba(20, 71, 204, 0.06) 5%, rgba(20, 71, 204, 0.012) 90%);
@@ -166,7 +168,7 @@ textarea:hover::placeholder {
 
     --content-max-width: 1216px;
     --content-padding: 148px;
-    --header-padding: 280px 148px 240px 148px;
+    --header-padding: 240px 148px;
   }
 
 }
@@ -180,7 +182,7 @@ textarea:hover::placeholder {
     --medium-font-size: 16px;
 
     --content-padding: 104px;
-    --header-padding: 240px 104px 216px 104px;
+    --header-padding: 216px 104px;
   }
 
 }
@@ -189,7 +191,7 @@ textarea:hover::placeholder {
 
   :root {
     --content-padding: 64px;
-    --header-padding: 240px 64px 216px 64px;
+    --header-padding: 216px;
   }
 
 }
@@ -198,7 +200,7 @@ textarea:hover::placeholder {
 
   :root {
     --header-font-size: 44px;
-    --header-padding: 196px 64px 148px 64px;
+    --header-padding: 148px 64px;
   }
 
   textarea {
@@ -215,7 +217,7 @@ textarea:hover::placeholder {
     --xs-font-size: 12px;
 
     --content-padding: 32px;
-    --header-padding: 196px 32px 148px 32px;
+    --header-padding: 148px 32px;
   }
 
 }
@@ -230,7 +232,7 @@ textarea:hover::placeholder {
     --small-font-size: 12px;
 
     --content-padding: 32px 16px;
-    --header-padding: 196px 16px 148px 16px;
+    --header-padding: 148px 16px;
   }
 
 }

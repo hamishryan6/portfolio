@@ -15,7 +15,7 @@ export default function Playground() {
       <div className='Playground__Header'>
         <div className='Playground__Header__Container'>
 
-          <img src={theme === 'dark' ? headerImageDark : headerImageLight} className='Playground__Header__Image' />
+          <img src={theme === 'Dark' ? headerImageDark : headerImageLight} className='Playground__Header__Image' />
 
           <div className='Playground__Header__Content'>
             <div className='Playground__Header__Text'>

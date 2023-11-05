@@ -1,5 +1,4 @@
-import { Children, ReactNode, createContext, useContext, useState } from "react";
-import { JsxElement } from "typescript";
+import { createContext, useContext } from "react";
 import { modalStateContext } from "./types";
 
 const modalContext = createContext<modalStateContext | undefined>(undefined)

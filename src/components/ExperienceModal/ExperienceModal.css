@@ -2,6 +2,7 @@
 
     .ExperienceModal__Main {
         position: fixed;
+        top: 0px;
         width: 100vw;
         height: 100dvh;
         background-color: rgba(0, 0, 0, 0.48);
@@ -9,7 +10,7 @@
         justify-content: center;
         align-items: center;
         padding: 148px;
-        z-index: 1;
+        z-index: 2;
         overflow-y: scroll;
     }
 
