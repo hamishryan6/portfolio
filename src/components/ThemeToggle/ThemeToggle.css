@@ -80,5 +80,22 @@
         height: 32px;
         padding: 8px;
     }
+    
+    .ThemeToggle_Selection__Dark, .ThemeToggle_Selection__Light {
+        width: 32px;
+        left: 18px;
+    }
+
+    .ThemeToggle_Selection__Dark {
+        transform: translateX(-18px);
+
+        transition: transform ease-out 300ms;
+    }
+
+    .ThemeToggle_Selection__Light {
+        transform: translateX(18px);
+        
+        transition: transform ease-out 300ms;
+    }
 
 }
