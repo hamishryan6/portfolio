@@ -1,101 +1,84 @@
 @media screen {
 
     .ThemeToggle__Main {
-        border-radius: 64px;
-        background: var(--main-gradient-fill);
-        position: fixed;
-        right: 48px;
-        top: 48px;
+        position: relative;
+        border-radius: 8px;
         display: flex;
-        padding: 8px;
-        z-index: 2;
-
-        transition: background ease-in 200ms;
-
-    }
-
-    .ThemeToggle__Blur {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 100%;
-        z-index: 3;
-        border-radius: 64px;
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-    }
-
-    .ThemeToggle__Option {
-        width: 48px;
-        height: 48px;
-        display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        z-index: 5;
+        cursor: pointer;
+        gap: 4px;
     }
 
-    .ThemeToggle__Option__Unselected {
-        opacity: 0.2;
+    .ThemeToggle__Container {
+        padding: 10px;
+        display: flex;
+        opacity: 1;
+        border-radius: 8px;
+        width: 40px;
+        height: 40px;
+
+        transition: background-color 200ms ease-out;
+        transition: opacity 100ms ease-out;
     }
 
-    .ThemeToggle__Switch {
-        width: 48px;
-        height: 48px;
-        background-color: var(--main-bg-colour);
+    .ThemeToggle__Container:hover {
+        background-color: var(--main-accent-colour);
+
+        transition: background-color 200ms ease-out;
+        transition: opacity 100ms ease-out;
+    }
+
+    .ThemeToggle__Container:active {
+        opacity: 0.6;
+
+        transition: opacity 100ms ease-out;
+    }
+
+    .ThemeToggle__Container__Selected {
+        background-color: transparent;
+        opacity: 1;
+    }
+
+    .ThemeToggle__Container__Selected:hover {
+        background-color: transparent;
+        opacity: 1;
+    }
+
+    .ThemeToggle__Container__Selected:active {
+        background-color: transparent;
+        opacity: 1;
+    }
+
+    .ThemeToggle_Selection__Dark, .ThemeToggle_Selection__Light {
         position: absolute;
-        top: 8px;
-        left: 32px;
-        border-radius: 48px;
-        z-index: 4;
+        background: var(--hover-accent-colour);
+        border-radius: 8px;
+        top: 0px;
+        bottom: 0px;
+        width: 40px;
+        left: 22px;
     }
 
-    .ThemeToggle__Switch__Left {
-        transform: translateX(-24px);
+    .ThemeToggle_Selection__Dark {
+        transform: translateX(-22px);
 
-        transition: ease-in 200ms;
+        transition: transform ease-out 300ms;
     }
 
-    .ThemeToggle__Switch__Right {
-        transform: translateX(24px);
-
-        transition: ease-in 200ms;
+    .ThemeToggle_Selection__Light {
+        transform: translateX(22px);
+        
+        transition: transform ease-out 300ms;
     }
 }
 
 @media (width < 704px) {
 
-    .ThemeToggle__Main {
-        right: 32px;
-        top: 32px;
-    }
-
-    .ThemeToggle__Option {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .ThemeToggle__Switch {
-        width: 40px;
-        height: 40px;
-        left: 28px;
-    }
-    
-    .ThemeToggle__Switch__Left {
-        transform: translateX(-20px);
-    }
-    
-    .ThemeToggle__Switch__Right {
-        transform: translateX(20px);
-    }
-
-}
-
-@media (width < 516px) {
-
-    .ThemeToggle__Main {
-        right: 16px;
-        top: 16px;
+    .ThemeToggle__Container {
+        width: 32px;
+        height: 32px;
+        padding: 8px;
     }
 
 }

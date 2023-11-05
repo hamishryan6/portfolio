@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import './ThemeToggle.css'
-import Moon from '../Icons/Moon'
-import Sun from '../Icons/Sun'
 import { useModalContext } from '../../Context'
+import MoonRegular from '../Icons/MoonRegular'
+import SunRegular from '../Icons/SunRegular'
+import SunSolid from '../Icons/SunSolid'
+import MoonSolid from '../Icons/MoonSolid'
 
-type Props = {
-  isVisible: boolean
-}
-
-export default function ThemeToggle({ isVisible }: Props) {
+export default function ThemeToggle() {
 
   const { theme, setTheme } = useModalContext()
 
@@ -17,57 +15,75 @@ export default function ThemeToggle({ isVisible }: Props) {
   const setDefaultTheme = () => {
     const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
     if (darkThemeMq.matches) {
-      setTheme('dark')
+      setTheme('Dark')
     } else {
-      setTheme('light')
+      setTheme('Light')
+    }
+  }
+
+  const renderIcon = (icon: 'Moon' | 'Sun') => {
+    switch (icon) {
+      case 'Moon': switch (theme) {
+        case 'Dark': return <MoonSolid fill={'var(--main-action-colour)'} width='100%' height='100%' />
+        case 'Light': return <MoonRegular fill={'var(--main-text-colour'} width='100%' height='100%' />
+      }
+      case 'Sun': switch (theme) {
+        case 'Light': return <SunSolid fill={'var(--main-action-colour)'} width='100%' height='100%' />
+        case 'Dark': return <SunRegular fill={'var(--main-text-colour'} width='100%' height='100%' />
+      }
     }
   }
 
   const toggleTheme = () => {
-    if (theme === 'dark') {
-      setTheme('light')
-      sessionStorage.setItem("theme", "light")
+    if (theme === 'Dark') {
+      setTheme('Light')
+      sessionStorage.setItem("theme", "Light")
       themeColourTag.content = "#F2F6FA"
     }
     else {
-      setTheme('dark')
-      sessionStorage.setItem("theme", "dark")
+      setTheme('Dark')
+      sessionStorage.setItem("theme", "Dark")
       themeColourTag.content = "#1D1E1F"
     }
   }
 
   useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.remove('light')
-      document.documentElement.classList.add('dark')
+    if (theme === 'Dark') {
+      document.documentElement.classList.remove('Light')
+      document.documentElement.classList.add('Dark')
       themeColourTag.content = "#1D1E1F"
     } else {
-      document.documentElement.classList.remove('dark')
-      document.documentElement.classList.add('light')
+      document.documentElement.classList.remove('Dark')
+      document.documentElement.classList.add('Light')
       themeColourTag.content = "#F2F6FA"
     }
   }, [theme])
 
   useEffect(() => {
-    let storageTheme = sessionStorage.getItem('theme') as 'dark' | 'light' | null
+    let storageTheme = sessionStorage.getItem('theme') as 'Dark' | 'Light' | null
     if (storageTheme === null) return setDefaultTheme()
     setTheme(storageTheme)
   }, [])
 
   return (
-    <div className='ThemeToggle__Main' onClick={toggleTheme} style={{ display: isVisible ? "flex" : 'none' }}>
+    <div className='ThemeToggle__Main'>
 
-      <div className='ThemeToggle__Blur' />
-
-      <div className={'ThemeToggle__Switch ' + (theme === 'dark' ? "ThemeToggle__Switch__Left" : "ThemeToggle__Switch__Right")} />
-
-      <div className={`ThemeToggle__Option ` + (theme !== 'dark' ? "ThemeToggle__Option__Unselected" : '')}>
-        <Moon color={'var(--main-text-colour'} width='20px' height='20px' />
+      <div
+        className={`ThemeToggle__Container ${theme === 'Dark' && 'ThemeToggle__Container__Selected'}`}
+        onClick={theme === 'Light' ? () => toggleTheme() : () => null}
+      >
+        {renderIcon('Moon')}
       </div>
 
-      <div className={`ThemeToggle__Option ` + (theme !== 'light' ? "ThemeToggle__Option__Unselected" : '')}>
-        <Sun color={'var(--main-text-colour)'} width='20px' height='20px' />
+      <div
+        className={`ThemeToggle__Container ${theme === 'Light' && 'ThemeToggle__Container__Selected'}`}
+        onClick={theme === 'Dark' ? () => toggleTheme() : () => null}
+      >
+        {renderIcon('Sun')}
       </div>
+
+      <div className={`ThemeToggle_Selection__${theme}`} />
+
     </div>
   )
 }
