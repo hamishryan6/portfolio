@@ -10,7 +10,7 @@ import { useModalContext } from '../../Context'
 
 export default function Home() {
 
-  const tech: tech[] = ['Figma', 'Webflow', 'After Effects', 'Illustrator', 'InDesign', 'Photoshop', 'XD', 'Lottie', 'React', 'React Native', 'Typescript', 'HTML', 'CSS', 'Firebase', 'AWS', 'Shopify']
+  const tech: tech[] = ['Figma', 'Webflow', 'After Effects', 'Illustrator', 'InDesign', 'Photoshop', 'XD', 'Lottie', 'React', 'React Native', 'Typescript', 'HTML', 'CSS', 'Firebase', 'AWS', 'Wordpress']
 
   const [selectedExperience, setSelectedExperience] = useState<Experience>()
   const { isModalOpen, setIsModalOpen } = useModalContext()
