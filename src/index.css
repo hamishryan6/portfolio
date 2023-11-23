@@ -191,7 +191,7 @@ textarea:hover::placeholder {
 
   :root {
     --content-padding: 64px;
-    --header-padding: 216px;
+    --header-padding: 216px 64px;
   }
 
 }

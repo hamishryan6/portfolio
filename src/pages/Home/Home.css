@@ -30,6 +30,20 @@
         max-width: 1064px;
 
         transition: color ease-out 300ms;
+
+        animation: header-slide-in 1200ms ease-out forwards;
+    }
+
+    @keyframes header-slide-in {
+        from {
+            opacity: 0;
+            transform: translateY(80px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
     }
 
     .Header__Span {
@@ -43,14 +57,32 @@
 
     .Designer__Span {
         background-color: var(--green-accent);
-    
-        transition: background-color ease-out 300ms;
+        /* animation: design-highlight-fade 1200ms ease-out 400ms forwards; */
     }
 
     .Developer__Span {
         background-color: var(--orange-accent);
+        /* animation: developer-highlight-fade 1200ms ease-out 400ms forwards; */
+    }
 
-        transition: background-color ease-out 300ms;
+    @keyframes design-highlight-fade {
+        from {
+            background-color: transparent
+        }
+
+        to {
+            background-color: var(--green-accent)
+        }
+    }
+
+    @keyframes developer-highlight-fade {
+        from {
+            background-color: transparent
+        }
+
+        to {
+            background-color: var(--orange-accent)
+        }
     }
 
     .Divider__Container {
@@ -330,7 +362,7 @@
         grid-column: none;
     }
 
-    .ContactForm__Names > input {
+    .ContactForm__Names>input {
         width: 100%;
     }
 
