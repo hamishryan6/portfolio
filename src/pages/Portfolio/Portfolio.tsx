@@ -6,10 +6,9 @@ import PGWWebsite from '../../assets/images/pgw-website.jpg'
 import memble from '../../assets/images/memble.jpg'
 import ae from '../../assets/images/ae.jpg'
 import hometownnp from '../../assets/images/hometownnp.jpg'
+import { useEffect } from 'react'
 
 export default function Portfolio() {
-
-    const { theme } = useModalContext()
 
     return (
         <div className='Page__Main'>

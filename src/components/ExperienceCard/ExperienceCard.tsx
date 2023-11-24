@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './ExperienceCard.css'
 import vald from '../../assets/images/vald.jpg'
 import qut from '../../assets/images/qut.jpg'
 import moonward from '../../assets/images/moonward.jpg'
 import allbrands from '../../assets/images/allbrands.jpg'
 import { Experience, company } from '../../types'
+import { useModalContext } from '../../Context'
 
 type props = {
     experience: Experience
@@ -36,6 +37,13 @@ export const renderImage = (company: company) => {
 }
 
 export default function ExperienceCard({ experience, onClick }: props) {
+
+    const { revealObservedElements } = useModalContext()
+
+    useEffect(() => {
+        revealObservedElements('ExperienceCard')
+    }, [])
+
     return (
         <div className='ExperienceCard' onClick={onClick}>
 

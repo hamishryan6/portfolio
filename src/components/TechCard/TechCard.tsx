@@ -18,6 +18,7 @@ import typescript from '../../assets/images/typescript.png'
 import wordpress from '../../assets/images/wordpress.png'
 import Tooltip from '../Tooltip/Tooltip'
 import { tech } from '../../types'
+import { useModalContext } from '../../Context'
 
 type Props = {
     title: tech,
@@ -25,6 +26,8 @@ type Props = {
 }
 
 export default function TechCard({ title, hideTitle }: Props) {
+
+    const { revealObservedElements } = useModalContext()
 
     const renderImage = (title: tech) => {
         switch (title) {
@@ -53,8 +56,13 @@ export default function TechCard({ title, hideTitle }: Props) {
         return <div className='TechCard__Title'>{title}</div>
     }
 
+    useEffect(() => {
+        if (hideTitle) return
+        revealObservedElements('TechCard')
+    }, [])
+
     return (
-        <div className='TechCard'>
+        <div className={hideTitle ? 'TechCard show' : 'TechCard'}>
             { hideTitle && <Tooltip label={title} /> }
             <div className='TechCard__Image'>
                 <img src={renderImage(title)} width={'100%'} height={'100%'} />
