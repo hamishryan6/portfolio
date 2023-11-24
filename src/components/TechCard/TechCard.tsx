@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './TechCard.css'
 import aftereffects from '../../assets/images/aftereffects.png'
 import aws from '../../assets/images/aws.png'
