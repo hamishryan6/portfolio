@@ -3,6 +3,7 @@ import './ExperienceModal.css'
 import { renderImage, renderTitles } from '../ExperienceCard/ExperienceCard'
 import TechCard from '../TechCard/TechCard'
 import { Experience } from '../../types'
+import XMark from '../Icons/XMark'
 
 type Props = {
     experience: Experience
@@ -17,17 +18,17 @@ export default function ExperienceModal({ experience, closeModal, keepModalOpen 
             <TechCard title={tech} hideTitle key={index} />
         ))
     }
-    
-        const renderParagraph = (text: string) => {
-            const hasBreak = text.includes("<br/>")
-            if(!hasBreak) return text
-            
-            let paragraphs = text.split(`<br/>`)
-    
-            return paragraphs.map((paragraph, index) => (
-                <div className='ExperienceModal__Body' key={index}>{paragraph}</div>
-            ))
-        }
+
+    const renderParagraph = (text: string) => {
+        const hasBreak = text.includes("<br/>")
+        if (!hasBreak) return text
+
+        let paragraphs = text.split(`<br/>`)
+
+        return paragraphs.map((paragraph, index) => (
+            <div className='ExperienceModal__Body' key={index}>{paragraph}</div>
+        ))
+    }
 
     const renderAboutCompany = () => {
         if (experience.about === undefined) return
@@ -48,6 +49,12 @@ export default function ExperienceModal({ experience, closeModal, keepModalOpen 
 
     return (
         <div className='ExperienceModal__Main' onClick={closeModal}>
+
+            <div className='ExperienceModal__MobileCloseButton' onClick={() => closeModal()}>
+                {/* <XMark color='var(--main-bg-colour)' height='20px' width='20px' /> */}
+                Tap to close
+            </div>
+
             <div className='ExperienceModal__Modal' onClick={(e) => e.stopPropagation()}>
 
                 <div className='ExperienceModal__Title'>
@@ -61,6 +68,10 @@ export default function ExperienceModal({ experience, closeModal, keepModalOpen 
 
                         <div className='ExperienceCard__Company'>{experience.company + " • " + experience.type}</div>
                     </div>
+                </div>
+
+                <div className='ExperienceModal__CloseButton' onClick={() => closeModal()}>
+                    <XMark color='var(--main-text-colour)' height='24px' width='24px' />
                 </div>
 
                 <div className='ExperienceModal__Divider' />
