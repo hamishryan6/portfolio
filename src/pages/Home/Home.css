@@ -30,59 +30,45 @@
         max-width: 1064px;
 
         transition: color ease-out 300ms;
-
-        animation: header-slide-in 1200ms ease-out forwards;
     }
 
-    @keyframes header-slide-in {
-        from {
-            opacity: 0;
-            transform: translateY(80px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0px);
-        }
-    }
-
-    .Header__Span {
+    .Header__Highlight {
+        position: relative;
         border-radius: 8px;
         padding: 0px 10px 0px 8px;
         height: 80px;
         display: flex;
         align-items: end;
         margin-left: 8px;
+        overflow: hidden;
+    }
+    
+    .Header__Highlight__Bar {
+        position: absolute;
+        border-radius: 8px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: -1;
+        transform: translateX(-100%);
+    
     }
 
-    .Designer__Span {
+    @keyframes highlight-bar-grow {
+        to {
+            transform: translateX(0px);
+        }
+    }
+    
+    .Designer__Highlight > .Header__Highlight__Bar {
         background-color: var(--green-accent);
-        /* animation: design-highlight-fade 1200ms ease-out 400ms forwards; */
+        animation: highlight-bar-grow 600ms ease-out forwards;
     }
 
-    .Developer__Span {
+    .Developer__Highlight > .Header__Highlight__Bar {
         background-color: var(--orange-accent);
-        /* animation: developer-highlight-fade 1200ms ease-out 400ms forwards; */
-    }
-
-    @keyframes design-highlight-fade {
-        from {
-            background-color: transparent
-        }
-
-        to {
-            background-color: var(--green-accent)
-        }
-    }
-
-    @keyframes developer-highlight-fade {
-        from {
-            background-color: transparent
-        }
-
-        to {
-            background-color: var(--orange-accent)
-        }
+        animation: highlight-bar-grow 600ms ease-out forwards 200ms;
     }
 
     .Divider__Container {
@@ -201,7 +187,7 @@
         max-width: 880px;
     }
 
-    .Header__Span {
+    .Header__Highlight {
         height: 60px;
     }
 
@@ -277,12 +263,12 @@
         max-width: 760px;
     }
 
-    .Header__Span {
+    .Header__Highlight {
         height: 56px;
         margin-left: 8px;
     }
 
-    .Developer__Span {
+    .Developer__Highlight {
         margin-top: 0.5em;
     }
 
@@ -290,7 +276,7 @@
 
 @media (width < 861px) {
 
-    .Header__Span {
+    .Header__Highlight {
         margin-left: 0;
         margin-right: 8px;
     }
@@ -303,7 +289,7 @@
         max-width: 600px;
     }
 
-    .Header__Span {
+    .Header__Highlight {
         height: 48px;
     }
 
@@ -328,7 +314,7 @@
         max-width: 472px;
     }
 
-    .Header__Span {
+    .Header__Highlight {
         height: 9vw;
     }
 

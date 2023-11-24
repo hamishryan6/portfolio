@@ -57,6 +57,30 @@ export default function Home() {
     )
   }
 
+  const observeElement = (observer: IntersectionObserver, className: string) => { 
+    const elements = document.querySelectorAll(`.${className}`)
+
+    elements.forEach(element => {
+      observer.observe(element)
+    })
+
+  }
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          entry.target.classList.toggle('show', entry.isIntersecting)
+          if (entry.isIntersecting) observer.unobserve(entry.target)
+        })
+      },
+      { threshold: 0.8 }
+    )
+    observeElement(observer, 'TechCard')
+    observeElement(observer, 'ExperienceCard')
+  }, [])
+
+
   useEffect(() => {
     if (isModalOpen) document.body.style.overflow = 'hidden'
     else document.body.style.overflow = 'scroll'
@@ -71,9 +95,15 @@ export default function Home() {
         <div className='Header__Container'>
           <h1 className='Header'>
             I’m Hamish, a
-            <span className='Header__Span Designer__Span'>UI/UX Designer</span>
+            <span className='Header__Highlight Designer__Highlight'>
+              <div className='Header__Highlight__Bar' />
+              UI/UX Designer
+            </span>
             and
-            <span className='Header__Span Developer__Span'>Frontend Developer</span>
+            <span className='Header__Highlight Developer__Highlight'>
+              <div className='Header__Highlight__Bar' />
+              Frontend Developer
+            </span>
             in Brisbane, Australia
           </h1>
         </div>
