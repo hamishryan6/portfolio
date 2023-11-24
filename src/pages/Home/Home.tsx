@@ -13,7 +13,7 @@ export default function Home() {
   const tech: tech[] = ['Figma', 'Webflow', 'After Effects', 'Illustrator', 'InDesign', 'Photoshop', 'XD', 'Lottie', 'React', 'React Native', 'Typescript', 'HTML', 'CSS', 'Firebase', 'AWS', 'Wordpress']
 
   const [selectedExperience, setSelectedExperience] = useState<Experience>()
-  const { isModalOpen, setIsModalOpen } = useModalContext()
+  const { isModalOpen, setIsModalOpen, revealObservedElements } = useModalContext()
 
   const renderTechCards = () => (
     tech.map((techItem, index) => (
@@ -56,30 +56,6 @@ export default function Home() {
       />
     )
   }
-
-  const observeElement = (observer: IntersectionObserver, className: string) => { 
-    const elements = document.querySelectorAll(`.${className}`)
-
-    elements.forEach(element => {
-      observer.observe(element)
-    })
-
-  }
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          entry.target.classList.toggle('show', entry.isIntersecting)
-          if (entry.isIntersecting) observer.unobserve(entry.target)
-        })
-      },
-      { threshold: 0.8 }
-    )
-    observeElement(observer, 'TechCard')
-    observeElement(observer, 'ExperienceCard')
-  }, [])
-
 
   useEffect(() => {
     if (isModalOpen) document.body.style.overflow = 'hidden'

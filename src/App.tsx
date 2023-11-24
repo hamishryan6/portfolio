@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect, useReducer, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Route, Routes } from "react-router-dom";
 import Home from './pages/Home/Home'
 import Playground from './pages/Playground/Playground';
@@ -12,9 +12,31 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
   const [theme, setTheme] = useState<'Dark' | 'Light'>('Dark')
 
+  const observeElement = (observer: IntersectionObserver, className: string) => { 
+    const elements = document.querySelectorAll(`.${className}`)
+
+    elements.forEach(element => {
+      observer.observe(element)
+    })
+  }
+
+  const revealObservedElements = (className: string) => {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          console.log('logging')
+          entry.target.classList.toggle('show', entry.isIntersecting)
+          if (entry.isIntersecting) observer.unobserve(entry.target)
+        })
+      },
+      { threshold: 0.6 }
+    )
+
+      observeElement(observer, className)
+  }
 
   return (
-    <Context.Provider value={{ isModalOpen, setIsModalOpen, theme, setTheme }}>
+    <Context.Provider value={{ isModalOpen, setIsModalOpen, theme, setTheme, revealObservedElements }}>
       <Navigation />
       <Routes>
         <Route path='/' element={<Home />} />

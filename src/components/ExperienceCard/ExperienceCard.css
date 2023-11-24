@@ -22,7 +22,7 @@
     .ExperienceCard.show {
         transform: translateY(0);
         opacity: 1;
-        transition: ease-out 600ms;
+        transition: ease-out 400ms;
     }
  
     .ExperienceCard:hover {

@@ -21,7 +21,7 @@
     .TechCard.show {
         transform: translateY(0);
         opacity: 1;
-        transition: ease-out 600ms;
+        transition: ease-out 400ms;
     }
 
     .TechCard:hover {
@@ -97,22 +97,15 @@
 @media (width < 516px) {
 
     .TechCard {
-        padding: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: 12px;
         border-width: 2px;
     } 
 
-    .TechCard__Title {
-        display: none;
-    }
-
     .TechCard__Image {
-        width: 44px;
-        height: 44px;
-        min-width: 44px;
-        min-height: 44px;
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        min-height: 32px;
         border-radius: 4px;
     }
 
