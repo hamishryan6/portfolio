@@ -52,7 +52,7 @@ export default function Home() {
       <ExperienceModal
         experience={selectedExperience}
         closeModal={() => setIsModalOpen(false)}
-        keepModalOpen={() => setIsModalOpen(true)}
+        isModalOpen={isModalOpen}
       />
     )
   }

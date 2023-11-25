@@ -3,14 +3,19 @@ import { renderImage, renderTitles } from '../ExperienceCard/ExperienceCard'
 import TechCard from '../TechCard/TechCard'
 import { Experience } from '../../types'
 import XMark from '../Icons/XMark'
+import { useEffect, useState } from 'react'
+import { useModalContext } from '../../Context'
 
 type Props = {
     experience: Experience
     closeModal: () => void
-    keepModalOpen: () => void
+    isModalOpen: boolean
 }
 
-export default function ExperienceModal({ experience, closeModal }: Props) {
+export default function ExperienceModal({ experience, closeModal, isModalOpen }: Props) {
+
+    const [test, setTest] = useState<boolean>(false)
+    const { revealObservedElements } = useModalContext()
 
     const renderTech = () => {
         return experience.tech.map((tech, index) => (
@@ -46,6 +51,11 @@ export default function ExperienceModal({ experience, closeModal }: Props) {
         })
     }
 
+    useEffect(() => {
+        revealObservedElements('.ExperienceModal__Modal', 0)
+        revealObservedElements('.ExperienceModal__Main', 0)
+    }, [])
+
     return (
         <div className='ExperienceModal__Main' onClick={closeModal}>
 
@@ -56,7 +66,7 @@ export default function ExperienceModal({ experience, closeModal }: Props) {
 
             <div className='ExperienceModal__Modal' onClick={(e) => e.stopPropagation()}>
 
-                <div className='ExperienceModal__Title'>
+                <div className='ExperienceModal__Title' >
                     <div className='ExperienceCard__Image'>
                         <img src={renderImage(experience.company)} width={'100%'} height={'100%'} />
                     </div>
