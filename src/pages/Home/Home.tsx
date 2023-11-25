@@ -58,6 +58,13 @@ export default function Home() {
   }
 
   useEffect(() => {
+    revealObservedElements('.Content__Container>h2', 0, '20px')
+    revealObservedElements('.Content__Container>p', 0, '20px')
+    revealObservedElements('.EmailLink__Main', 0, '20px')
+  }, [])
+  
+
+  useEffect(() => {
     if (isModalOpen) document.body.style.overflow = 'hidden'
     else document.body.style.overflow = 'scroll'
   }, [isModalOpen])

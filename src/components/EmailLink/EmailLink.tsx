@@ -47,7 +47,7 @@ export default function EmailLink() {
                 <Tooltip label={copyTooltip} isPersistant={isEmailCopied} parentIsClickable />
 
                 <div className='EmailLink__Copy' onClick={() => copyEmail()}>
-                    <Copy color='var(--main-text-colour)' height='20px' width='20px' />
+                    <Copy color='var(--main-text-colour)' height='100%' width='100%' />
                 </div>
             </div>
 

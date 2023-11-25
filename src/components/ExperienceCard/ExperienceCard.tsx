@@ -41,7 +41,7 @@ export default function ExperienceCard({ experience, onClick }: props) {
     const { revealObservedElements } = useModalContext()
 
     useEffect(() => {
-        revealObservedElements('ExperienceCard')
+        revealObservedElements('.ExperienceCard', 0, '20px')
     }, [])
 
     return (

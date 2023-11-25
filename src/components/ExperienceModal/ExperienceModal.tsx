@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import './ExperienceModal.css'
 import { renderImage, renderTitles } from '../ExperienceCard/ExperienceCard'
 import TechCard from '../TechCard/TechCard'
@@ -11,11 +10,11 @@ type Props = {
     keepModalOpen: () => void
 }
 
-export default function ExperienceModal({ experience, closeModal, keepModalOpen }: Props) {
+export default function ExperienceModal({ experience, closeModal }: Props) {
 
     const renderTech = () => {
         return experience.tech.map((tech, index) => (
-            <TechCard title={tech} hideTitle key={index} />
+            <TechCard title={tech} hasTooltip key={index} />
         ))
     }
 

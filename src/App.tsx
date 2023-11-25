@@ -13,14 +13,14 @@ function App() {
   const [theme, setTheme] = useState<'Dark' | 'Light'>('Dark')
 
   const observeElement = (observer: IntersectionObserver, className: string) => { 
-    const elements = document.querySelectorAll(`.${className}`)
+    const elements = document.querySelectorAll(className)
 
     elements.forEach(element => {
       observer.observe(element)
     })
   }
 
-  const revealObservedElements = (className: string) => {
+  const revealObservedElements = (className: string, threshold: number, offset?: string) => {
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
@@ -29,7 +29,10 @@ function App() {
           if (entry.isIntersecting) observer.unobserve(entry.target)
         })
       },
-      { threshold: 0.6 }
+      {
+        threshold: threshold ?? 0,
+        rootMargin: offset ? `0px 0px ${offset} 0px` : '0px'
+       }
     )
 
       observeElement(observer, className)

@@ -22,10 +22,10 @@ import { useModalContext } from '../../Context'
 
 type Props = {
     title: tech,
-    hideTitle?: boolean
+    hasTooltip?: boolean
 }
 
-export default function TechCard({ title, hideTitle }: Props) {
+export default function TechCard({ title, hasTooltip }: Props) {
 
     const { revealObservedElements } = useModalContext()
 
@@ -52,18 +52,18 @@ export default function TechCard({ title, hideTitle }: Props) {
     }
 
     const renderTitle = () => {
-        if (hideTitle === true) return
+        if (hasTooltip === true) return
         return <div className='TechCard__Title'>{title}</div>
     }
 
     useEffect(() => {
-        if (hideTitle) return
-        revealObservedElements('TechCard')
+        if (hasTooltip) return
+        revealObservedElements('.TechCard', 0, '20px')
     }, [])
 
     return (
-        <div className={hideTitle ? 'TechCard show' : 'TechCard'}>
-            { hideTitle && <Tooltip label={title} /> }
+        <div className={hasTooltip ? 'TechCard show' : 'TechCard'}>
+            { hasTooltip && <Tooltip label={title} /> }
             <div className='TechCard__Image'>
                 <img src={renderImage(title)} width={'100%'} height={'100%'} />
             </div>
