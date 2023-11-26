@@ -46,12 +46,19 @@ export default function Home() {
     setIsModalOpen(true)
   }
 
+  const closeModal = () => {
+    const modal = document.querySelector('.ExperienceModal__Modal.show')
+    if (!modal) return console.log('No modal found')
+    modal.classList.remove('show')
+    setTimeout(() => setIsModalOpen(false), 100)
+  }
+
   const renderModal = () => {
     if (selectedExperience === undefined) return
     if (isModalOpen) return (
       <ExperienceModal
         experience={selectedExperience}
-        closeModal={() => setIsModalOpen(false)}
+        closeModal={() => closeModal()}
         isModalOpen={isModalOpen}
       />
     )

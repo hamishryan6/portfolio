@@ -5,7 +5,7 @@
         top: 0px;
         width: 100vw;
         height: 100dvh;
-        background-color: transparent;
+        /* background-color: transparent; */
         display: flex;
         justify-content: center;
         align-items: start;
@@ -33,7 +33,7 @@
         background-color: var(--main-bg-colour);
         box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.12);
 
-        transition: ease-out 300ms;
+        transition: ease-out 200ms;
 
         transform: scale(0.8);
         opacity: 0.4;
@@ -44,7 +44,7 @@
         transform: scale(1);
         opacity: 1;
 
-        transition: ease-out 200ms;
+        transition: transform ease-out 200ms, opacity ease-out 200ms;
     }
 
     .ExperienceModal__MobileCloseButton {

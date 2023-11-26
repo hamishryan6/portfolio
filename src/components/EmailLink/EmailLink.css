@@ -50,3 +50,11 @@
 }
 
 }
+
+@media (width < 516px) {
+
+    .EmailLink__Copy {
+        padding: 22px;
+    }
+
+}
