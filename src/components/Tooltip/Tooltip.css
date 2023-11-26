@@ -14,15 +14,11 @@
         color: var(--main-text-colour);
         font-size: var(--small-font-size);
         line-height: 100%;
-
-        transition: opacity ease-in 160ms;
     }
 
     div:hover>.Tooltip__Main,
     a:hover>.Tooltip__Main {
         opacity: 1;
-
-        transition: opacity ease-in 160ms;
     }
 
     div:active>.parentIsClickable,
