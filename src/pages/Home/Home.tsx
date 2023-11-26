@@ -46,16 +46,30 @@ export default function Home() {
     setIsModalOpen(true)
   }
 
+  const closeModal = () => {
+    const modal = document.querySelector('.ExperienceModal__Modal.show')
+    if (!modal) return console.log('No modal found')
+    modal.classList.remove('show')
+    setTimeout(() => setIsModalOpen(false), 100)
+  }
+
   const renderModal = () => {
     if (selectedExperience === undefined) return
     if (isModalOpen) return (
       <ExperienceModal
         experience={selectedExperience}
-        closeModal={() => setIsModalOpen(false)}
-        keepModalOpen={() => setIsModalOpen(true)}
+        closeModal={() => closeModal()}
+        isModalOpen={isModalOpen}
       />
     )
   }
+
+  useEffect(() => {
+    revealObservedElements('.Content__Container>h2', 0, '20px')
+    revealObservedElements('.Content__Container>p', 0, '20px')
+    revealObservedElements('.EmailLink__Main', 0, '20px')
+  }, [])
+  
 
   useEffect(() => {
     if (isModalOpen) document.body.style.overflow = 'hidden'

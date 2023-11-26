@@ -5,7 +5,7 @@
         top: 0px;
         width: 100vw;
         height: 100dvh;
-        background-color: rgba(0, 0, 0, 0.48);
+        /* background-color: transparent; */
         display: flex;
         justify-content: center;
         align-items: start;
@@ -14,7 +14,14 @@
         overflow-y: scroll;
     }
 
+    .ExperienceModal__Main.show {
+        background-color: rgba(0, 0, 0, 0.48);
+
+        transition: ease-out 200ms;
+    }
+
     .ExperienceModal__Modal {
+        position: relative;
         display: flex;
         max-width: 1016px;
         padding: 48px 48px 64px 48px;
@@ -23,12 +30,64 @@
         gap: 48px;
         border-radius: 24px;
         border: 2px solid var(--main-accent-colour);
-        background-color: var(--main-bg-colour);;
+        background-color: var(--main-bg-colour);
         box-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.12);
 
-        transition: border ease-out 300ms;
-        transition: background-color ease-out 300ms;
+        transition: ease-out 200ms;
 
+        transform: scale(0.8);
+        opacity: 0.4;
+        
+    }
+
+    .ExperienceModal__Modal.show {
+        transform: scale(1);
+        opacity: 1;
+
+        transition: transform ease-out 200ms, opacity ease-out 200ms;
+    }
+
+    .ExperienceModal__MobileCloseButton {
+        display: none;
+        position: absolute;
+        top: 4px;
+        height: 64px;
+        width: 100%;
+        color: var(--main-bg-colour);
+        align-items: center;
+        justify-content: center;
+        opacity: 0.8;
+    }
+
+    .ExperienceModal__MobileCloseButton:active {
+        opacity: 0.6;
+    }
+
+    .ExperienceModal__CloseButton {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 8px;
+        height: 40px;
+        width: 40px;
+        opacity: 0.6
+    }
+
+    .ExperienceModal__CloseButton:hover {
+        opacity: 1;
+
+        background-color: var(--hover-accent-colour);
+    }
+
+    .ExperienceModal__CloseButton:active {
+        opacity: .6;
+
+        background-color: var(--hover-accent-colour);
     }
 
     .ExperienceModal__Title {
@@ -154,17 +213,26 @@
 
     .ExperienceModal__Main {
         padding: 8px;
-        background-color: rgba(0, 0, 0, 0.64);
+        padding-top: 64px;
+        background-color: rgba(0, 0, 0, 0.72);
         align-items: end;
     }
 
     .ExperienceModal__Modal {
         padding: 20px;
         gap: 20px;
-        max-height: 80vh;
+        max-height: 100%;
         overflow-y: scroll;
         border-radius: 16px;
         border: none;
+    }
+
+    .ExperienceModal__CloseButton {
+        display: none;
+    }
+
+    .ExperienceModal__MobileCloseButton {
+        display: flex;
     }
 
     .ExperienceModal__Divider {

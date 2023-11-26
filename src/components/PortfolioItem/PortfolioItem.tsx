@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './PortfolioItem.css'
 import TechCard from '../TechCard/TechCard'
 import PortfolioLink from '../PortfolioLink/PortfolioLink'
 import { tech } from '../../types'
+import { useModalContext } from '../../Context'
 
 type Props = {
     title: string
@@ -20,6 +21,8 @@ type Props = {
 
 export default function PortfolioItem({ title, company, year, description, tags, tech, links, image }: Props) {
 
+    const { revealObservedElements } = useModalContext()
+
     const renderTags = () => {
         return tags.map((tag, index) => {
             switch (tag) {
@@ -32,7 +35,7 @@ export default function PortfolioItem({ title, company, year, description, tags,
 
     const renderTech = () => {
         return tech.map((tech, index) => (
-            <TechCard title={tech} key={index} hideTitle />
+            <TechCard title={tech} key={index} hasTooltip />
         ))
     }
 
@@ -54,6 +57,11 @@ export default function PortfolioItem({ title, company, year, description, tags,
             <PortfolioLink label={link.label} link={link.link} key={index} />
         ))
     }
+
+    useEffect(() => {
+        revealObservedElements('.PortfolioItem__Main', 0, '20px')
+    }, [])
+
 
     return (
         <div className='PortfolioItem__Main'>

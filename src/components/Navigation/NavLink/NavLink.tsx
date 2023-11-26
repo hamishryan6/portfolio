@@ -12,7 +12,7 @@ export default function NavLink({ to, label }: Props) {
     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
 
     const scrollToTop = () => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, left: 0 });
     }
 
     useEffect(() => {

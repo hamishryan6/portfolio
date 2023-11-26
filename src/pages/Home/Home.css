@@ -42,7 +42,7 @@
         margin-left: 8px;
         overflow: hidden;
     }
-    
+
     .Header__Highlight__Bar {
         position: absolute;
         border-radius: 8px;
@@ -52,7 +52,7 @@
         left: 0;
         z-index: -1;
         transform: translateX(-100%);
-    
+
     }
 
     @keyframes highlight-bar-grow {
@@ -60,13 +60,13 @@
             transform: translateX(0px);
         }
     }
-    
-    .Designer__Highlight > .Header__Highlight__Bar {
+
+    .Designer__Highlight>.Header__Highlight__Bar {
         background-color: var(--green-accent);
         animation: highlight-bar-grow 600ms ease-out forwards;
     }
 
-    .Developer__Highlight > .Header__Highlight__Bar {
+    .Developer__Highlight>.Header__Highlight__Bar {
         background-color: var(--orange-accent);
         animation: highlight-bar-grow 600ms ease-out forwards 200ms;
     }
@@ -101,6 +101,30 @@
         grid-template-columns: 292px 1fr;
         gap: 92px;
         width: 100%;
+    }
+
+    .Content__Container>h2 {
+        transform: translateY(var(--reveal-element-offset));
+        opacity: 0;
+    }
+
+    .Content__Container>h2.show {
+        transform: translateY(0px);
+        opacity: 1;
+
+        transition: ease-out 400ms;
+    }
+
+    .Content__Container>p {
+        transform: translateY(var(--reveal-element-offset));
+        opacity: 0;
+    }
+
+    .Content__Container>p.show {
+        transform: translateY(0px);
+        opacity: 1;
+
+        transition: ease-out 400ms;
     }
 
     .ExperienceCard__Container {

@@ -4,6 +4,15 @@
         flex-direction: column;
         gap: 32px;
         max-width: var(--content-max-width);
+        opacity: 0;
+        transform: translateY(var(--reveal-element-offset));
+    }
+
+    .PortfolioItem__Main.show {
+        opacity: 1;
+        transform: translateY(0px);
+
+        transition: ease-out 400ms;
     }
 
     .PortfolioItem__TitleContainer {
@@ -121,6 +130,7 @@
 }
 
 @media (width < 861px) {
+
 
     .PortfolioItem__TitleContainer {
         flex-direction: column;

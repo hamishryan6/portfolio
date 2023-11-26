@@ -21,5 +21,5 @@ export type modalStateContext = {
     setIsModalOpen: (state: boolean) => void
     theme: 'Dark' | 'Light'
     setTheme: (state: 'Dark' | 'Light') => void
-    revealObservedElements: (classNames: string) => void
+    revealObservedElements: (classNames: string, threshold: number, offset?: string) => void
 }

@@ -11,7 +11,8 @@
         transition: ease-out 100ms;
         cursor: pointer;
         position: relative;
-        transform: translateY(50%);
+
+        transform: translateY(var(--reveal-element-offset));
         opacity: 0;
 
         transition-property: transform, background;

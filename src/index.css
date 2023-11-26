@@ -169,6 +169,8 @@ textarea:hover::placeholder {
     --content-max-width: 1216px;
     --content-padding: 148px;
     --header-padding: 240px 148px;
+
+    --reveal-element-offset: 120px;
   }
 
 }
@@ -218,6 +220,8 @@ textarea:hover::placeholder {
 
     --content-padding: 32px;
     --header-padding: 148px 32px;
+
+    --reveal-element-offset: 80px;
   }
 
 }
