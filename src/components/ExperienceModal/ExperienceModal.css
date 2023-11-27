@@ -5,7 +5,7 @@
         top: 0px;
         width: 100vw;
         height: 100dvh;
-        /* background-color: transparent; */
+        background-color: rgba(0, 0, 0, 0.48);
         display: flex;
         justify-content: center;
         align-items: start;
@@ -14,11 +14,11 @@
         overflow-y: scroll;
     }
 
-    .ExperienceModal__Main.show {
+    /* .ExperienceModal__Main.show {
         background-color: rgba(0, 0, 0, 0.48);
 
         transition: ease-out 200ms;
-    }
+    } */
 
     .ExperienceModal__Modal {
         position: relative;

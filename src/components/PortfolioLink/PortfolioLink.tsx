@@ -6,7 +6,7 @@ import Globe from '../Icons/Globe'
 import AppStore from '../Icons/AppStore'
 
 type Props = {
-    label: 'GitHub' | 'Website' | 'App Store'
+    label: string
     link: string
 }
 
@@ -15,8 +15,8 @@ export default function PortfolioLink({ label, link }: Props) {
     const renderIcon = () => {
         switch (label) {
             case 'GitHub': return <GitHub height='24px' />
-            case 'Website': return <Globe height='20px' />
             case 'App Store': return <AppStore height='16px' />
+            default: return <Globe height='20px' />
         }
     }
 

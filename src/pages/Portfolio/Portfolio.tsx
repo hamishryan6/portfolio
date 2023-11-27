@@ -6,22 +6,18 @@ import PGWWebsite from '../../assets/images/pgw-website.jpg'
 import memble from '../../assets/images/memble.jpg'
 import ae from '../../assets/images/ae.jpg'
 import hometownnp from '../../assets/images/hometownnp.jpg'
-import { useEffect } from 'react'
+import FlightTracker from '../../assets/images/flight-tracker.jpg'
 
 export default function Portfolio() {
 
     return (
         <div className='Page__Main'>
 
-            <div className='Playground__Header'>
-                <div className='Playground__Header__Container'>
-
-                    <div className='Playground__Header__Text'>
+            <div className='Secondary__Header'>
+                    <div className='Secondary__Header__Text'>
                         <h2>Portfolio of work</h2>
                         <p>Below is a collection of projects I have designed and developed. These products are a mix of both personal and employed projects.</p>
                     </div>
-
-                </div>
             </div>
 
             <div className='Divider__Container'>
@@ -41,6 +37,25 @@ export default function Portfolio() {
                         link: 'https://github.com/hamishryan6/invoicing'
                     }]}
                     image={InvoiceGenerator}
+                />
+
+                <PortfolioItem
+                    title='Flight Tracker'
+                    year='2023'
+                    description={`As part of a coding challenge for a development role, I was tasked with creating a Flight Tracking site in Vue. It was my first experience with Vue, and I found it quite enjoyable to delve into a new framework, especially as I aimed to complete the task using Typescript. I designed a UI in Figma and proceeded to implement these designs in the frontend. For flight data, I received an API key from the company granting access to Airlabs, a global aviation database. This provided a great opportunity to showcase my proficiency with REST APIs, ensuring efficient API calls throughout the platform.`}
+                    tags={['Design', 'Frontend']}
+                    tech={['Figma', 'Typescript', 'Vue.js']}
+                    links={[
+                        {
+                            label: 'GitHub',
+                            link: 'https://github.com/hamishryan6/flight-tracker'
+                        },
+                        {
+                            label: 'Airlabs',
+                            link: 'https://airlabs.co'
+                        }
+                    ]}
+                    image={FlightTracker}
                 />
 
                 <PortfolioItem
