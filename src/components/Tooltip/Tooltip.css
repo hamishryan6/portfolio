@@ -1,7 +1,6 @@
 @media screen {
 
     .Tooltip__Main {
-        opacity: 0;
         display: none;
         position: absolute;
         top: -42px;
@@ -20,7 +19,6 @@
     div:hover>.Tooltip__Main,
     a:hover>.Tooltip__Main {
         display: block;
-        opacity: 1;
     }
 
     div:active>.parentIsClickable,
@@ -31,7 +29,7 @@
     }
 
     .PersistantTooltip {
-        opacity: 1;
+        display: block;
 
         transition: opacity ease-in 160ms;
     }

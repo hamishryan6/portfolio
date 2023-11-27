@@ -37,6 +37,7 @@
         min-height: 48px;
         border-radius: 8px;
         overflow: hidden;
+        background-color: #FFF;
     }
 
     .TechCard__Image img {

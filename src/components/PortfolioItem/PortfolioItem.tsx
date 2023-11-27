@@ -7,13 +7,13 @@ import { useModalContext } from '../../Context'
 
 type Props = {
     title: string
-    company: string
+    company?: string
     year: string
     description: string
     tags: ('Design' | 'Frontend' | 'Backend')[]
     tech: tech[]
     links?: {
-        label: 'GitHub' | 'Website' | 'App Store'
+        label: string
         link: string
     }[]
     image: string
@@ -67,7 +67,7 @@ export default function PortfolioItem({ title, company, year, description, tags,
         <div className='PortfolioItem__Main'>
             <div className='PortfolioItem__TitleContainer'>
                 <h3>{title}</h3>
-                <h4>{year} • {company}</h4>
+                <h4>{year}{company && (' • ' + company)}</h4>
             </div>
 
             <p className='PortfolioItem__Description'>{description}</p>

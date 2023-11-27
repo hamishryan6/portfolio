@@ -15,6 +15,7 @@ import html from '../../assets/images/html.png'
 import css from '../../assets/images/css.png'
 import lottie from '../../assets/images/lottie.png'
 import typescript from '../../assets/images/typescript.png'
+import vue from '../../assets/images/vue.png'
 import wordpress from '../../assets/images/wordpress.png'
 import Tooltip from '../Tooltip/Tooltip'
 import { tech } from '../../types'
@@ -45,6 +46,7 @@ export default function TechCard({ title, hasTooltip }: Props) {
             case 'React Native': return react
             case 'Shopify': return shopify
             case 'Typescript': return typescript
+            case 'Vue.js': return vue
             case 'Webflow': return webflow
             case 'Wordpress': return wordpress
             case 'XD': return xd
