@@ -29,6 +29,7 @@
         grid-row-start: 1;
         grid-column-start: 1;
         width: 100%;
+        max-width: var(--content-max-width);
     }
 
     .Secondary__Header__Content>button {
