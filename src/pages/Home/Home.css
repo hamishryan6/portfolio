@@ -23,7 +23,6 @@
         line-height: 160%;
         font-style: normal;
         font-weight: 500;
-        /* leading-trim: both; */
         display: flex;
         flex-wrap: wrap;
         align-items: end;
