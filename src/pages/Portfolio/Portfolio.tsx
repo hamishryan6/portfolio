@@ -7,6 +7,8 @@ import memble from '../../assets/images/memble.jpg'
 import ae from '../../assets/images/ae.jpg'
 import hometownnp from '../../assets/images/hometownnp.jpg'
 import FlightTracker from '../../assets/images/flight-tracker.jpg'
+import hutch from '../../assets/images/hutch.jpg'
+import bracketBuilder from '../../assets/images/bracket-builder.jpg'
 
 export default function Portfolio() {
 
@@ -14,10 +16,10 @@ export default function Portfolio() {
         <div className='Page__Main'>
 
             <div className='Secondary__Header'>
-                    <div className='Secondary__Header__Text'>
-                        <h2>Portfolio of work</h2>
-                        <p>Below is a collection of projects I have designed and developed. These products are a mix of both personal and employed projects.</p>
-                    </div>
+                <div className='Secondary__Header__Text'>
+                    <h2>Portfolio of work</h2>
+                    <p>Below is a collection of projects I have designed and developed. These products are a mix of both personal and employed projects.</p>
+                </div>
             </div>
 
             <div className='Divider__Container'>
@@ -25,6 +27,20 @@ export default function Portfolio() {
             </div>
 
             <div className='Section__Content'>
+
+                <PortfolioItem
+                    title='Bracket Builder'
+                    year='2023'
+                    description={`For this project I wanted to create a platform that allowed users to create their own sports bracket online. I took on the challenge of designing the UI, and developing both the frontend and backend code for Bracket Builder. Although I am still working on things like responsiveness and bug fixes, users are able to create a 4-team or 8-team bracket and enter results for each matchup. If the user creates an account, their bracket will be saved for them to edit and view once they close their browser.`}
+                    tags={['Design', 'Frontend', 'Backend']}
+                    tech={['AWS', 'Figma', 'Firebase', 'Illustrator', 'Lottie', 'React', 'Typescript']}
+                    links={[{
+                        label: 'Website',
+                        link: 'https://main.db4rr0odltsn9.amplifyapp.com/builder'
+                    }]}
+                    image={bracketBuilder}
+                />
+
                 <PortfolioItem
                     title='Invoice and Receipt Generator'
                     company='Hutch Table Accessories'
@@ -56,6 +72,20 @@ export default function Portfolio() {
                         }
                     ]}
                     image={FlightTracker}
+                />
+
+                <PortfolioItem
+                    title='Shopify Site'
+                    company='Hutch Table Accessories'
+                    year='2021 - 2023'
+                    description={`As Hutch Table Accessories started their online store, I was in charge of designing and developing the entire retail site on Wix, which would then be later migrate to Shopify. This site design provides its users with a intuitive experience, leading to more sales and less technical issues for the company. In addition to design, I have also added in some custom Liquid code creating custom components in the web builder, as well as creating 'locked' pages that can only be viewed by members to the site.`}
+                    tags={['Design', 'Frontend']}
+                    tech={['CSS', 'HTML', 'Shopify']}
+                    links={[{
+                        label: 'Website',
+                        link: 'https://www.hutchtableaccessories.com'
+                    }]}
+                    image={hutch}
                 />
 
                 <PortfolioItem
