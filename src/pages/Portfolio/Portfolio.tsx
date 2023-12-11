@@ -48,10 +48,10 @@ export default function Portfolio() {
                     description={`As Hutch Table Accessories launched their wholesale site, they needed an internal tool to help with shipping invoices and tax receipts. I designed and developed a simple web app to allow them to enter the appropriate information from an order and then download a formatted PDF using the react-pdf library. Although I don't have an exact copy of the real project I created for Hutch, I have uploaded a replica with generic branding to GitHub`}
                     tags={['Design', 'Frontend']}
                     tech={['AWS', 'Figma', 'React', 'Typescript']}
-                    links={[{
-                        label: 'GitHub',
-                        link: 'https://github.com/hamishryan6/invoicing'
-                    }]}
+                    // links={[{
+                    //     label: 'GitHub',
+                    //     link: 'https://github.com/hamishryan6/invoicing'
+                    // }]}
                     image={InvoiceGenerator}
                 />
 
