@@ -37,12 +37,12 @@ export default function ThemeToggle() {
   const toggleTheme = () => {
     if (theme === 'Dark') {
       setTheme('Light')
-      sessionStorage.setItem("theme", "Light")
+      localStorage.setItem("theme", "Light")
       themeColourTag.content = "#F2F6FA"
     }
     else {
       setTheme('Dark')
-      sessionStorage.setItem("theme", "Dark")
+      localStorage.setItem("theme", "Dark")
       themeColourTag.content = "#1D1E1F"
     }
   }
@@ -60,7 +60,7 @@ export default function ThemeToggle() {
   }, [theme])
 
   useEffect(() => {
-    let storageTheme = sessionStorage.getItem('theme') as 'Dark' | 'Light' | null
+    let storageTheme = localStorage.getItem('theme') as 'Dark' | 'Light' | null
     if (storageTheme === null) return setDefaultTheme()
     setTheme(storageTheme)
   }, [])
