@@ -6,6 +6,7 @@ import { tech } from '../../types'
 import { useModalContext } from '../../Context'
 
 type Props = {
+    id: string
     title: string
     company?: string
     year: string
@@ -19,7 +20,7 @@ type Props = {
     image: string
 }
 
-export default function PortfolioItem({ title, company, year, description, tags, tech, links, image }: Props) {
+export default function PortfolioItem({ id, title, company, year, description, tags, tech, links, image }: Props) {
 
     const { revealObservedElements } = useModalContext()
 
@@ -64,7 +65,7 @@ export default function PortfolioItem({ title, company, year, description, tags,
 
 
     return (
-        <div className='PortfolioItem__Main'>
+        <section className='PortfolioItem__Main' id={id}>
             <div className='PortfolioItem__TitleContainer'>
                 <h3>{title}</h3>
                 <h4>{year}{company && (' • ' + company)}</h4>
@@ -93,6 +94,6 @@ export default function PortfolioItem({ title, company, year, description, tags,
 
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

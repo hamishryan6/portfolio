@@ -29,6 +29,7 @@ export default function Portfolio() {
             <div className='Section__Content'>
 
                 <PortfolioItem
+                    id='bracket-builder'
                     title='Bracket Builder'
                     year='2023'
                     description={`For this project I wanted to create a platform that allowed users to create their own sports bracket online. I took on the challenge of designing the UI, and developing both the frontend and backend code for Bracket Builder. Although I am still working on things like responsiveness and bug fixes, users are able to create a 4-team or 8-team bracket and enter results for each matchup. If the user creates an account, their bracket will be saved for them to edit and view once they close their browser.`}
@@ -42,6 +43,7 @@ export default function Portfolio() {
                 />
 
                 <PortfolioItem
+                    id='invoice-generator'
                     title='Invoice and Receipt Generator'
                     company='Hutch Table Accessories'
                     year='2023'
@@ -56,6 +58,7 @@ export default function Portfolio() {
                 />
 
                 <PortfolioItem
+                    id='flight-tracker'
                     title='Flight Tracker'
                     year='2023'
                     description={`As part of a coding challenge for a development role, I was tasked with creating a Flight Tracking site in Vue. It was my first experience with Vue, and I found it quite enjoyable to delve into a new framework, especially as I aimed to complete the task using Typescript. I designed a UI in Figma and proceeded to implement these designs in the frontend. For flight data, I received an API key from the company granting access to Airlabs, a global aviation database. This provided a great opportunity to showcase my proficiency with REST APIs, ensuring efficient API calls throughout the platform.`}
@@ -75,6 +78,7 @@ export default function Portfolio() {
                 />
 
                 <PortfolioItem
+                    id='hutch'
                     title='Shopify Site'
                     company='Hutch Table Accessories'
                     year='2021 - 2023'
@@ -89,6 +93,7 @@ export default function Portfolio() {
                 />
 
                 <PortfolioItem
+                    id='pgw-financial'
                     title='Marketing Website'
                     company='PGW Financial'
                     year='2022'
@@ -103,6 +108,7 @@ export default function Portfolio() {
                 />
 
                 <PortfolioItem
+                    id='hometown-np'
                     title='Mobile App & Web App'
                     company='Hometown NP'
                     year='2022'
@@ -113,6 +119,7 @@ export default function Portfolio() {
                 />
 
                 <PortfolioItem
+                    id='memble'
                     title='Mobile App'
                     company='Memble'
                     year='2022'
@@ -127,6 +134,7 @@ export default function Portfolio() {
                 />
 
                 <PortfolioItem
+                    id='ae-gardening-maintenance'
                     title='Marketing Website'
                     company='A&E Gardening and Maintenance'
                     year='2022'
