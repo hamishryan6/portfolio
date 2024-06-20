@@ -2,6 +2,17 @@ import { Experience } from "./types";
 
 export let experience: Experience[] = [
     {
+        tech: ["Figma", "Illustrator", "Photoshop", "HTML", "CSS"],
+        description: "As a Digital Designer & Frontend Developer at Spirit Super, I assisted with updating the Member Online experience with new features. A key task of mine was rebranding the Member Online platform as Spirit Super and CareSuper merge funds.",
+        skills: ["Web Design", "Mobile Design", "Responsive Design", "Wireframing", "Prototyping", "Frontend Development", "GitHub"],
+        duration: "February 2024",
+        title: 'Digital Designer & Frontend Developer',
+        company: 'Spirit Super',
+        about: 'Spirit Super is an Australian industry superannuation fund offering a range of investment options and financial planning services. It focuses on generating strong returns for its members to help them achieve their retirement goals.',
+        type: 'Full-time',
+        isCurrent: true
+    },
+    {
         tech: ["Figma", "After Effects", "Illustrator", "Photoshop", "Lottie"],
         description: "As a UI/UX Designer at VALD, I was tasked with improving and redesigning multiple products. These changes were implemented based on feedback and identified issues from both external and internal users of VALD products. Each product at the company had its own application. Whether it was for iOS, Android, Web, or WPF, priority was given to using similar patterns and styling to create a cohesive ecosystem across all products.",
         skills: ["Web Design", "Mobile Design", "Responsive Design", "Wireframing", "Prototyping", "User Interview", "Motion Design", "Agile Working Environment"],
