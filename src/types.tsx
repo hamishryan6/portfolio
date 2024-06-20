@@ -1,7 +1,7 @@
 import { ReactElement } from "react"
 
 export type tech = 'After Effects' | 'AWS' | 'CSS' | 'Figma' | 'Firebase' | 'HTML' | 'InDesign' | 'Illustrator' | 'Lottie' | 'Photoshop' | 'React' | 'React Native' | 'Shopify' | 'Typescript' | 'Vue.js' | 'Webflow' | 'Wordpress' | 'XD'
-export type company = 'VALD' | 'QUT' | 'Moonward' | 'All Brands Toys'
+export type company = 'Spirit Super' | 'VALD' | 'QUT' | 'Moonward' | 'All Brands Toys'
 
 export type Experience = {
     duration: string,
