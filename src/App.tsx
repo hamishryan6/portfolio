@@ -24,7 +24,6 @@ function App() {
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
-          console.log('logging')
           entry.target.classList.toggle('show', entry.isIntersecting)
           if (entry.isIntersecting) observer.unobserve(entry.target)
         })
