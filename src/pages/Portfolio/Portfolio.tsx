@@ -1,5 +1,4 @@
 import './Portfolio.css'
-import { useModalContext } from '../../Context'
 import PortfolioItem from '../../components/PortfolioItem/PortfolioItem'
 import InvoiceGenerator from '../../assets/images/invoice-generator.png'
 import PGWWebsite from '../../assets/images/pgw-website.jpg'
@@ -9,6 +8,7 @@ import hometownnp from '../../assets/images/hometownnp.jpg'
 import FlightTracker from '../../assets/images/flight-tracker.jpg'
 import hutch from '../../assets/images/hutch.jpg'
 import bracketBuilder from '../../assets/images/bracket-builder.jpg'
+import bookingSystem from '../../assets/images/booking-system.jpg'
 
 export default function Portfolio() {
 
@@ -27,6 +27,16 @@ export default function Portfolio() {
             </div>
 
             <div className='Section__Content'>
+
+                <PortfolioItem
+                    id='booking-system'
+                    title='Parking Booking System'
+                    year='2023'
+                    description={`I was asked by a local apartment complex to develop a booking system for their additional residential parks. This system took into consideration the resident's unit number and whether they had already booked that week. Resident's could manage their bookings and save their registration numbers.`}
+                    tags={['Design', 'Frontend', 'Backend']}
+                    tech={['AWS', 'Figma', 'Firebase', 'Illustrator', 'Lottie', 'React', 'Typescript']}
+                    image={bookingSystem}
+                />
 
                 <PortfolioItem
                     id='bracket-builder'

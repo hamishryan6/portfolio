@@ -46,17 +46,6 @@ export let experience: Experience[] = [
 ]
 
 export let education: Experience[] = [
-    // {
-    //     tech: ["React"],
-    //     description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    //     skills: ["Web Design", "Mobile Design", "Responsive Design"],
-    //     duration: "2024 - Present",
-    //     title: 'Graduate Certificate in IT',
-    //     subTitle: 'Web Development Bootcamp',
-    //     company: 'QUT',
-    //     type: 'Part-time',
-    //     isCurrent: true
-    // },
     {
         tech: ["Figma", "After Effects", "Illustrator", "InDesign", "Photoshop", "HTML", "CSS"],
         description: `While pursuing this degree, I was exposed to a wide range of design mediums, spanning from typography to software. As my studies progressed, I developed a keen interest in Product Design, which I chose to delve deeper into for my Honours capstone project.<br/>The project, 'NaviGo', focused on providing wayfinding for Brisbane’s public transport system. Accessibility was a primary concern throughout NaviGo's development. I implemented visual adjustments to cater to individuals who are colour-blind or have dyslexia.<br/>Upon the project's completion, I was honoured to receive the Konnect Apps Award for the best Product Design in the graduating class.`,
