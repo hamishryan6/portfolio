@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import './ExperienceCard.css'
-import spiritSuper from '../../assets/images/spiritSuper.jpg'
+import caresuper from '../../assets/images/caresuper.jpg'
 import vald from '../../assets/images/vald.jpg'
 import qut from '../../assets/images/qut.jpg'
 import moonward from '../../assets/images/moonward.jpg'
@@ -19,7 +19,7 @@ export const renderImage = (company: company) => {
         case 'Moonward': return moonward
         case 'QUT': return qut
         case 'VALD': return vald
-        case 'Spirit Super': return spiritSuper
+        case 'CareSuper': return caresuper
     }
 }
 
