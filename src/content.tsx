@@ -4,12 +4,12 @@ import { generateDurationString } from "./utilities";
 export let experience: Experience[] = [
     {
         tech: ["Figma", "Illustrator", "Photoshop", "HTML", "CSS"],
-        description: "As a Digital Designer & Frontend Developer at Spirit Super, I assisted with updating the Member Online experience with new features. A key task of mine was rebranding the Member Online platform as Spirit Super and CareSuper merge funds.",
+        description: "As a Digital Designer & Frontend Developer at CareSuper, I assisted with updating the Member Online experience with new features. A key task of mine was rebranding the Member Online platform as CareSuper and CareSuper merge funds.",
         skills: ["Web Design", "Mobile Design", "Responsive Design", "Wireframing", "Prototyping", "Frontend Development", "GitHub"],
         duration: generateDurationString({start: { month: 2, year: 2024 }}),
         title: 'Digital Designer & Frontend Developer',
-        company: 'Spirit Super',
-        about: 'Spirit Super is an Australian industry superannuation fund offering a range of investment options and financial planning services. It focuses on generating strong returns for its members to help them achieve their retirement goals.',
+        company: 'CareSuper',
+        about: 'CareSuper is an Australian industry superannuation fund offering a range of investment options and financial planning services. It focuses on generating strong returns for its members to help them achieve their retirement goals.',
         type: 'Full-time',
         isCurrent: true
     },
