@@ -4,7 +4,7 @@ import { generateDurationString } from "./utilities";
 export let experience: Experience[] = [
     {
         tech: ["Figma", "Illustrator", "Photoshop", "HTML", "CSS"],
-        description: "As a Digital Designer & Frontend Developer at CareSuper, I assisted with updating the Member Online experience with new features. A key task of mine was rebranding the Member Online platform as CareSuper and CareSuper merge funds.",
+        description: "As a Digital Designer & Frontend Developer at CareSuper, I assisted with updating the Member Online experience with new features. A key task of mine was rebranding the Member Online platform when Spirit Super and CareSuper merged funds.",
         skills: ["Web Design", "Mobile Design", "Responsive Design", "Wireframing", "Prototyping", "Frontend Development", "GitHub"],
         duration: generateDurationString({start: { month: 2, year: 2024 }}),
         title: 'Digital Designer & Frontend Developer',
